@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* 追従ボタンの動き */
+html{
+    scroll-behavior: smooth;
+}
