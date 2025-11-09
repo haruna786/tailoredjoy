@@ -185,6 +185,21 @@ height: 10px;
     z-index: 10;
 }
 
+/* 横スクロール部分 */
+.scrool-content{
+display: flex;
+flex-direction: row; /* 左から右に配置 */
+flex-wrap: wrap;/* はみ出す場合に折り返す */
+justify-content: space-between;
+max-width: 960px;
+margin:0 auto;
+}
+
+.illust-fv{
+width: 300px;
+height: 300px;
+}
+
 
 /* ワークス */
 .works_image{
@@ -200,4 +215,5 @@ height: 10px;
     justify-content: center;
     gap: 0;
     width: 100%;
+    height: auto;
 }
