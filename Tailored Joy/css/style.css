@@ -5,7 +5,7 @@ html{
 }
 
 /* 見出しの画像 */
-.heading_h2{
+/* .heading_h2{
 width:auto;
 height: 10px;
 }
@@ -13,13 +13,10 @@ height: 10px;
 .heading_h3{
 width:auto;
 height: 10px;
-}
+} */
 
 
 /* ハンバーガーメニュー */
-.header_nav{
-        display: none;
-}
 
 .hamburger{
         display: block;
@@ -72,6 +69,30 @@ height: 10px;
         transform: rotate(-45deg);
         bottom:0;
 }
+.header_nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000bb;
+    z-index: 9998;
+}
+.header_nav ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.header_nav li{
+    color: #fff;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+
 
 /* コンテナ設定 */
 .firstview {
@@ -167,6 +188,14 @@ height: 10px;
 
 /* ワークス */
 .works_image{
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+}
+
+/* ワークス下のイラスト */
+.illust_image{
     display: flex;
     justify-content: center;
     gap: 0;
