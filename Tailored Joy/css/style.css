@@ -3,3 +3,172 @@
 html{
     scroll-behavior: smooth;
 }
+
+/* 見出しの画像 */
+.heading_h2{
+width:auto;
+height: 10px;
+}
+
+.heading_h3{
+width:auto;
+height: 10px;
+}
+
+
+/* ハンバーガーメニュー */
+.header_nav{
+        display: none;
+}
+
+.hamburger{
+        display: block;
+        width: 30px;
+        height:30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;/* 最大値 */
+        cursor: pointer;
+}
+.hamburger span {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: 14px;
+        transition: 0.3s;
+}
+
+/* 擬似要素 */
+.hamburger span::before{
+        content: ""; /* 要素として認識させるコード */
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: -14px;
+        transition: 0.3s;
+}
+.hamburger span::after{
+        content: ""; /* 要素として認識させるコード */
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -14px;
+        transition: 0.3s;
+}
+.open span{
+        background-color: transparent;
+}
+
+.open span::before{
+        transform: rotate(45deg);
+        top:0; /*元々同じ位置にあったものをさっきずらしたのを戻した */
+}
+
+.open span::after{
+        transform: rotate(-45deg);
+        bottom:0;
+}
+
+/* コンテナ設定 */
+.firstview {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* オーバーレイコンテンツ */
+.overlay-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* --- ヘッダー --- */
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+/* --- メインビジュアル --- */
+.main-visual {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 背景画像（テクスチャ） */
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* メインタイトル "TAILORED JOY" */
+.title-img {
+    position: absolute;
+    width: 90%;
+    max-width: 1000px;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: contain;
+    z-index: 3; /* 一番手前に */
+}
+
+/* "enjoy...!" */
+.enjoy-text {
+    position: absolute;
+    top: 40%; /* 垂直位置を調整 */
+    left: calc(50% + -70px); /* 水平位置を調整 */
+    font-size: 16px;
+    white-space: nowrap;
+    z-index: 4; /* 最前面 */
+}
+/* "portfolio site" */
+.portfolio-text-img {
+    margin-left: auto;
+    margin-right: 120px;
+    margin-top: 300px;
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+    z-index: 10;
+}
+
+
+/* ワークス */
+.works_image{
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+}
