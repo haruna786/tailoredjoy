@@ -5,15 +5,12 @@ html{
 }
 
 /* 見出しの画像 */
-/* .heading_h2{
-width:auto;
-height: 10px;
-}
 
-.heading_h3{
-width:auto;
-height: 10px;
-} */
+
+.h3{
+width:115px;
+height:auto;
+}
 
 
 /* ハンバーガーメニュー */
@@ -91,8 +88,6 @@ height: 10px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
     "游ゴシック", "Yu Gothic", sans-serif;
 }
-
-
 
 /* コンテナ設定 */
 .firstview {
@@ -200,6 +195,101 @@ width: 300px;
 height: 300px;
 }
 
+/* コンセプト */
+#concept {
+    position: relative; /* ドット柄サイドバーの基準にする */
+    background-color: #ffffff;
+    padding: 80px 0;
+    overflow-x: hidden; /* 横スクロールの防止 */
+}
+.concept-inner {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 1; /* ドット柄より手前に配置 */
+}
+
+.heading_h3{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading_h3 .concept-h3 {
+    /* 既存の .h3 スタイルと重複しないように注意 */
+    width: 115px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.concept-catchphrase {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+.concept-text {
+    width: 70%; /* 狭い幅に設定して中央寄せ */
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: justify; /* 両端揃え（画像に近い表現） */
+    font-size: 14px;
+}
+/* VIEW MORE ボタン (aタグ) */
+.viewmore-button-link {
+    display: inline-block;
+    width: 275px;
+    margin-bottom: 80px;
+}
+
+/* VIEW MORE 画像 (viewmore_buttton) */
+.viewmore_buttton {
+    /* 既存の .viewmore_buttton スタイルと重複しないように注意 */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* 犬のイラストとテキストのコンテナ */
+.dog-illustration-container {
+    position: relative;
+    width: 200px; /* 犬のイラストの幅に合わせて調整 */
+    margin: 0 auto;
+}
+
+/* wan テキスト */
+.dog-callout {
+    position: absolute;
+    top: -50px; /* 犬の上の位置に調整 */
+    left: 0;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* お座りしている犬の画像 */
+.sitdog {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* --- 右側のドット柄サイドバーのスタイル --- */
+.dot-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px; /* ドット柄を収める幅 */
+    height: 100%;
+    z-index: 0; /* コンテンツの背後に配置 */
+}
+
+.dot-sidebar img {
+    /* 画像をサイドバー全体に敷き詰めます */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 縦長に引き伸ばして全体を覆う */
+    display: block;
+}
 
 /* ワークス */
 .works_image{
@@ -215,5 +305,11 @@ height: 300px;
     justify-content: center;
     gap: 0;
     width: 100%;
+    height: auto;
+}
+
+/* コンタクト */
+.send-button{
+    width: 275px;
     height: auto;
 }
