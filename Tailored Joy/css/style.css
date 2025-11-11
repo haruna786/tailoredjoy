@@ -5,8 +5,6 @@ html{
 }
 
 /* 見出しの画像 */
-
-
 .h3{
 width:115px;
 height:auto;
@@ -292,11 +290,31 @@ height: 300px;
 }
 
 /* ワークス */
+.heading_h2 {
+    margin-bottom: 50px;
+}
+.heading_h2 img {
+    width: 250px; /* 見出し画像のサイズ調整 */
+    height: auto;
+}
+
 .works_image{
     display: flex;
     justify-content: center;
     gap: 0;
     width: 100%;
+}
+/* VIEW ALL ボタン */
+.view-all-link {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+.view-all-link img {
+    width: 407px;
+    height: auto;
+    display: block;
 }
 
 /* ワークス下のイラスト */
@@ -306,6 +324,112 @@ height: 300px;
     gap: 0;
     width: 100%;
     height: auto;
+}
+
+/* アバウト */
+#about {
+    position: relative;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1286px;
+    height: 642px;
+    object-fit: cover; /* セクション全体を覆う */
+    z-index: 0;
+}
+
+.about-dots {
+    position: absolute;
+    bottom: -100px;
+    left: 30px;
+    width: 300px;
+    height: auto;
+    z-index: 1;
+}
+
+.about-main-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* 背景や装飾より手前に */
+}
+
+.about-h2 {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    width: 307px;
+    height: auto;
+    margin: 0; /* 親要素のmarginをリセット */
+}
+
+.about-left {
+    float: left;
+    margin-right: 80px; /* 右側のテキストとの間隔 */
+}
+
+.about-me {
+    width: 388px;
+    height: 424px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-right {
+    overflow: hidden; /* floatを解除し、残りのスペースを使用 */
+    padding-top: 50px; /* 画像の上端に合うように調整 */
+    margin-top: 130px;
+    border-top: 3px solid #000;
+    text-align: left;
+}
+
+.name {
+    margin-bottom: 20px;
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.name-en {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.name-jp {
+    font-size: 16px;
+    display: inline-block;
+}
+
+.description {
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.description p {
+    max-width: 400px;
+}
+
+/* VIEW MORE ボタン */
+.about-viewmore-link {
+    display: block;
+    width: 273px;
+    height: auto;
+}
+.about-viewmore-link img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* コンタクト */
