@@ -437,3 +437,66 @@ height: 300px;
     width: 275px;
     height: auto;
 }
+
+/* --- フッター--- */
+footer {
+    border-top: 7px solid #000;
+    position: relative;
+    background-color:#7b6c5f;
+    overflow: hidden;
+}
+.footer-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 666px;
+    height: 116px;
+    z-index: 1;
+}
+.footer_inner {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 2; /* 装飾より手前に */
+    display: flex;
+    flex-direction: column;
+}
+.footer_address {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer_address li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 2.2; /* 行間を広げる */
+    display: block;
+    letter-spacing: 0.1em;
+}
+/* 著作権 */
+.copy {
+    color: #000;
+    font-size: 14px;
+}
+/* PAGE TOP */
+.pagetop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 125px;
+}
+
+.pagetop img {
+    width: 100%;
+    height: auto;
+}
+
+.footer_logo {
+    position: absolute;
+    bottom: -50px;
+    max-width: 1440px;
+    height: auto;
+    z-index: 0; /* 最背面の装飾に */
+}
