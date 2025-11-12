@@ -17,31 +17,67 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
+
 <body>
     <!-- ヘッダー部分 -->
     <header id="header">
+        <h1 class="header-logo">
+            <a href="./index.html"></a>
+            <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY" />
+        </h1>
+        <!-- PCのハンバーガー部分 -->
         <div class="hamburger">
             <span></span>
         </div>
         <nav class="header_nav">
-            <ul>
+            <ul class="hamburger_illust">
+                <li><a href="#top"><img src="./images/strawberry.PNG" alt="strawberry"></a></li>
+                <li><a href="#concept"><img src="./images/dog1.PNG" alt="dog"></a></li>
+                <li><a href="#works"><img src="./images/flowers_illust.PNG" alt="flower"></a></li>
+                <li><a href="#about"><img src="./images/ribbon.PNG" alt="ribbon"></a></li>
+            </ul>
+            <ul class="hamburger_text">
+                <li><a href="#top"><img src="./images/top_text_pc.png" alt="top"></a></li>
+                <li><a href="#concept"><img src="./images/concept_text_pc.png" alt="concept"></a></li>
+                <li><a href="#works"><img src="./images/works_text_pc.png" alt="works"></a></li>
+                <li><a href="#about"><img src="./images/about_text_pc.png" alt="about"></a></li>
+            </ul>
+            <div class="hamburger-under">
+                <div class="hamburger-logo">
+                    <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY" />
+                </div>
+                <div class="hamburger_contact">
+                    <a href="#contact"><img src="./images/contact_button.png" alt="contact"></a>
+                </div>
+            </div>
+        </nav>
+        <!-- SPのハンバーガー部分 -->
+        <div class="hamburger-sp">
+            <span></span>
+        </div>
+        <nav class="header_nav-sp">
+            <ul class="hamburger-sp_text">
                 <li><a href="#top"><img src="./images/top_text_pc.png" alt="top"></a></li>
                 <li><a href="#concept"><img src="./images/concept_text_pc.png" alt="concept"></a></li>
                 <li><a href="#works"><img src="./images/works_text_pc.png" alt="works"></a></li>
                 <li><a href="#about"><img src="./images/about_text_pc.png" alt="about"></a></li>
                 <li><a href="#contact"><img src="./images/contact_button.png" alt="contact"></a></li>
             </ul>
+            <ul class="hamburger-sp_illust">
+                <li><img src="./images/strawberry.PNG" alt="strawberry"></li>
+                <li><img src="./images/dog1.PNG" alt="dog"></li>
+                <li><img src="./images/flowers_illust.PNG" alt="flower"></li>
+                <li><img src="./images/ribbon.PNG" alt="ribbon"></li>
+            </ul>
         </nav>
 
         <!-- ファーストビュー -->
         <div class="firstview">
             <img src="./images/background_FV.jpg" alt="背景の紙のテクスチャ" class="background-img">
-
             <div class="overlay-content">
-                <header class="header">
-                    <img src="./images/portfoliosite_text.png" alt="PORTFORIO SITE" class="portfolio-text-img">
-                </header>
-
+                <div class="portfoliosite">
+                    <img src="./images/portfoliosite_text.png" alt="PORTFORIO SITE">
+                </div>
                 <div class="main-visual">
                     <img src="./images/fv_illust.png" alt="左右の線画イラスト" class="illustration-img">
 
@@ -59,8 +95,9 @@
             <img src="./images/dog1.PNG" alt="犬が寝ている画像" class="illust-fv" />
             <img src="./images/ribbon.PNG" alt="リボンの画像" class="illust-fv" />
         </div>
-
     </header>
+
+
     <!-- コンセプト -->
     <section id="concept">
         <div class="concept-inner">
@@ -83,6 +120,19 @@
             <img src="./images/dotto_rectangle2.png" alt="ドットの装飾" />
         </div>
     </section>
+
+    <!-- ナビゲーションバー -->
+    <nav>
+        <nav class="header_nav2">
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#concept">CONCEPT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONCEPT</a></li>
+            </ul>
+        </nav>
+    </nav>
 
     <!-- ワークス -->
     <section id="works">
@@ -242,7 +292,8 @@
             <!-- 追従 -->
             <div class="pagetop">
                 <a href="#header">
-                    <img src="./images/top_scroll.png" alt="PAGE TOP" />
+                    <img src="./images/top_scroll.png" alt="PAGE TOP" class="pegetop-frame" />
+                    <img src="./images/wood.PNG" alt="観葉植物のイラスト" class="pegetop-wood" />
                 </a>
             </div>
         </div>
@@ -259,7 +310,26 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
+    <script>
+        $(function () {
+            $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                // $(".header_nav").fadeToggle();
+            })
+        })
 
+        $(function () {
+            $(".hamburger-sp").click(function () {
+                $(".hamburger-sp").toggleClass("open-sp");
+                $(".header_nav-sp").fadeToggle();
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>
 
 
 

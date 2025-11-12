@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* ヘッダー部分 */
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 145/1920=0.0755 */
+    padding-right: 7.6%;
+    /* 56/1920=0.029 */
+    padding-left: 2.9%;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;/* 最大値 */
+}
+
+.header_nav ul {
+    display: flex;
+    gap : 75px;
+}
+
+.header_nav a {
+    color: #fff;
+    font-family:  "Bebas Kai","游ゴシック体", YuGothic, "游ゴシック Medium",
+    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: bold;
+    font-size : 18px;
+}
+
+.logo{
+    width : 227px;
+    padding-top: 10px;
+    padding-left: 10px;
+    z-index: 9999;
+    /* 値が大きいほど、他の要素の上に重なって表示 */
+}
+
+
+.hamburger,
+.header_nav-sp{
+    display: none;
+}
+
+/* slick */
+.slick-dots {
+    bottom: 0px;
+}
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+.slick-dots li button:before {
+    color: #fff;
+}
+
+/* SP Ver */
+@media screen and (max-width: 1100px) {
+    .header_nav{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        width: 30px;
+        height:30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;/* 最大値 */
+        cursor: pointer;
+    }
+    .hamburger span {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: 14px;
+        transition: 0.3s;
+    }
+ /* 擬似要素 */
+.hamburger span::before{
+        content: ""; /* 要素として認識させるコード */
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: -14px;
+        transition: 0.3s;
+    }
+    .hamburger span::after{
+        content: ""; /* 要素として認識させるコード */
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -14px;
+        transition: 0.3s;
+    }
+    .open span{
+        background-color: transparent;
+    }
+    .open span::before{
+        transform: rotate(45deg);
+        top:0; /*元々同じ位置にあったものをさっきずらしたのを戻した */
+    }
+
+    .open span::after{
+        transform: rotate(-45deg);
+        bottom:0;
+    }
+    .header_nav-sp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000bb;
+    z-index: 9998;
+}
+.header_nav-sp ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.header_nav-sp li{
+    color: #fff;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+}
+}
