@@ -78,18 +78,17 @@ header{
     width: 100%;
     background-color: #c3c3c3;
     z-index: 9998;
-
-    visibility: hidden; /* 要素を非表示にする */
-    opacity: 0; /* 透明にして非表示のアニメーションを可能にする */
-    transition: opacity 0.3s, visibility 0.3s; /* 表示・非表示を滑らかにする */
-
     display: flex;
     flex-direction: column; /* 要素を縦に並べる */
     justify-content: center; /* 垂直方向中央寄せ */
     align-items: center; /* 水平方向中央寄せ */
     padding: 0 5%;
     box-sizing: border-box;
+    visibility: hidden; /* 要素を非表示にする */
+    opacity: 0; /* 透明にして非表示のアニメーションを可能にする */
+    transition: 0.3s;
 }
+
 
 .hamburger.open + .header_nav {
     visibility: visible;
@@ -112,7 +111,7 @@ header{
 }
 
 .hamburger_text{
-    gap: 70px;
+    gap: 100px;
 }
 
 .hamburger_illust,
@@ -390,7 +389,6 @@ height:auto;
 #concept {
     position: relative; /* ドット柄サイドバーの基準にする */
     background-color: #ffffff;
-    padding: 80px 0;
     overflow-x: hidden; /* 横スクロールの防止 */
 }
 .concept-inner {
@@ -422,10 +420,11 @@ height:auto;
     line-height: 1.5;
 }
 .concept-text {
-    width: 70%; /* 狭い幅に設定して中央寄せ */
+    width: 100%;
+    max-width: 545px;
     margin: 0 auto;
     line-height: 1.8;
-    text-align: justify; /* 両端揃え（画像に近い表現） */
+    text-align: justify; /* 両端揃え */
     font-size: 14px;
 }
 /* VIEW MORE ボタン (aタグ) */
@@ -437,10 +436,10 @@ height:auto;
 
 /* VIEW MORE 画像 (viewmore_buttton) */
 .viewmore_buttton {
-    /* 既存の .viewmore_buttton スタイルと重複しないように注意 */
     width: 100%;
     height: auto;
     display: block;
+    margin-top: 64px;
 }
 /* 犬のイラストとテキストのコンテナ */
 .dog-illustration-container {
@@ -452,10 +451,30 @@ height:auto;
 /* wan テキスト */
 .dog-callout {
     position: absolute;
-    top: -50px; /* 犬の上の位置に調整 */
-    left: 0;
+    padding-top: 20px;
+    margin-left: -15px;
     font-size: 16px;
     white-space: nowrap;
+}
+.dog-callout span::before{
+    content: ""; /* 要素として認識させるコード */
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: 33px;
+    left: 5px;
+    transform: rotate(35deg);
+}
+.dog-callout span::after{
+    content: ""; /* 要素として認識させるコード */
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: -25px;
+    left: 5px;
+    transform: rotate(-35deg);
 }
 
 /* お座りしている犬の画像 */
@@ -480,17 +499,32 @@ height:auto;
     justify-content: flex-end;
     gap: 55px;
     margin-right: 73px;
+    padding-top: 50px;
 }
 
 /* ワークス */
-.heading_h2 {
-    margin-bottom: 50px;
-}
-.heading_h2 img {
-    width: 250px; /* 見出し画像のサイズ調整 */
-    height: auto;
+.works .heading_h2 {
+    position: absolute;
 }
 
+.about-main-content .heading_h2 img {
+    width: 250px; /* 見出し画像のサイズ調整 */
+    height: auto;
+    margin-top: 35px;
+    margin-right: 150px;
+}
+.works_inner{
+    position: absolute;
+    max-width: 1440px;
+    align-items: center;
+    margin-top: -390px;
+}
+.works-back{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 80px;
+}
 .works_image{
     display: flex;
     justify-content: center;
@@ -517,6 +551,7 @@ height:auto;
     gap: 0;
     width: 100%;
     height: auto;
+    margin-top: 50px;
 }
 
 /* アバウト */

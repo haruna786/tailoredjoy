@@ -112,7 +112,9 @@
                 <img src="./images/viewmore.png" alt="viewmore" class="viewmore_buttton">
             </a>
             <div class="dog-illustration-container">
-                <span class="dog-callout">wan</span>
+                <div class="dog-callout">wan
+                    <span></span>
+                </div>
                 <img src="./images/dog2.PNG" alt="お座りをしている犬" class="sitdog">
             </div>
         </div>
@@ -140,6 +142,9 @@
             <h2 class="heading_h2">
                 <img src="./images/works_text-big_pc.png" alt="works">
             </h2>
+            <div class="works-back">
+                <img src="./images/background_FV.jpg" alt="背景画像">
+            </div>
             <div class="works_inner">
                 <ul class="works_image">
                     <li class="image">
@@ -224,6 +229,36 @@
                     <li class="image">
                         <a href="./images/ribbon.PNG" data-lightbox="illust-gallery">
                             <img src="./images/ribbon.PNG" alt="リボンの画像" />
+                        </a>
+                    </li>
+                    <li class="image">
+                        <a href="./images/dog1.PNG" data-lightbox="illust-gallery">
+                            <img src="./images/dog1.PNG" alt="犬が寝ている画像" />
+                        </a>
+                    </li>
+                    <li class="image">
+                        <a href="./images/moon.PNG" data-lightbox="illust-gallery">
+                            <img src="./images/moon.PNG" alt="月の画像" />
+                        </a>
+                    </li>
+                    <li class="image">
+                        <a href="./images/wood.PNG" data-lightbox="illust-gallery">
+                            <img src="./images/wood.PNG" alt="観葉植物の画像" />
+                        </a>
+                    </li>
+                    <li class="image">
+                        <a href="./images/ribbon.PNG" data-lightbox="illust-gallery">
+                            <img src="./images/ribbon.PNG" alt="リボンの画像" />
+                        </a>
+                    </li>
+                    <li class="image">
+                        <a href="./images/flowers_illust.PNG" data-lightbox="illust-gallery">
+                            <img src="./images/flowers_illust.PNG" alt="お花の画像" />
+                        </a>
+                    </li>
+                    <li class="image">
+                        <a href="./images/strawberry.PNG" data-lightbox="illust-gallery">
+                            <img src="./images/strawberry.PNG" alt="いちごの画像" />
                         </a>
                     </li>
                 </ul>
@@ -311,6 +346,7 @@
 
 
     <script>
+        // ハンバーガーメニュー
         $(function () {
             $(".hamburger").click(function () {
                 $(".hamburger").toggleClass("open");
@@ -324,6 +360,32 @@
                 $(".header_nav-sp").fadeToggle();
             })
         })
+
+        // slick
+        $('.works_image').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 5,
+            slidesToScroll: 1
+        });
+
+        $(".illust_image").slick({
+            arrows: false,// 横スクロールが消える
+            autoplay: true, //自動再生
+            autoplaySpeed: 0,// 2秒間隔で動く
+            dots: true, //インジゲーター表示
+            slidesToShow: 10, //1度に2つのスライド表示
+            cssEase: 'linear',
+            responsive: [{
+                breakpoint: 767,// ブレイクポイント 767px
+                settings: { // その場合のオプション設定
+                    slidesToShow: 7// 一度に表示するスライドの数 1
+                }
+            }]
+        });
+
+
+
+
     </script>
 
 
