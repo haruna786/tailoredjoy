@@ -21,6 +21,7 @@ header{
     width: 100px;
     height:70px;
     background-color: #000;
+    border-radius: 25px;
     position: fixed;
     top: 30px;
     right: 10px;
@@ -181,6 +182,7 @@ header{
     width: 50px;
     height:36px;
     background-color: #000;
+    border-radius: 10px;
     position: absolute;
     top: 30px;
     right: 10px;
@@ -400,7 +402,7 @@ height:auto;
 
 .heading_h3{
     text-align: center;
-    margin-bottom: 50px;
+    margin: 50px;
 }
 
 .heading_h3 .concept-h3 {
@@ -565,11 +567,14 @@ height:auto;
     height: auto;
     display: block;
     object-fit: cover; /* 親要素全体を覆うように表示 */
+    padding: 10px;
+    background-color: #fff;
+    gap: 20px;
 }
 
 .slick-dots{
     top: -110px;
-    left: 25%;
+    left: 40%;
     max-width: 1000PX;
 }
 
@@ -581,6 +586,8 @@ height:auto;
     margin: 150px 83% 0px 17%;
     max-width: 1440px;
     color: #000;
+    width: 50px;
+    height: 50px;
 }
 .slick-prev {
     margin: 150px 85% 0px 15%;
@@ -733,40 +740,102 @@ height:auto;
     height: auto;
 }
 
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.form-style{
+    display: flex;
+    gap: 50px;
+}
+
+label {
+    display: block;
+    margin-top: 25px;
+    font-weight: bold;
+    color: #000;
+}
+
+input, textarea {
+    width: 150%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 70%;
+    margin: 50px 20%;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ホバー時のボタンスタイル */
+button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
 /* --- フッター--- */
 footer {
     border-top: 7px solid #000;
     position: relative;
     background-color:#7b6c5f;
     overflow: hidden;
+    padding-bottom: 50px; /* ロゴの下に余白 */
+    height: 450px; /* 見本に合わせて高さを確保 */
 }
 .footer-dots {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 666px;
-    height: 116px;
+    right: 0;
+    left: auto; /* 左からの指定を解除 */
+    width: 600px; /* サイズを調整 */
+    height: 120px;
+    object-fit: cover;
     z-index: 1;
 }
 .footer_inner {
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
-    z-index: 2; /* 装飾より手前に */
+    z-index: 3; /* 装飾より手前に */
+    display: flex;
+    justify-content: space-between; /* 左右のコンテンツを離す */
+    align-items: flex-start;
+    padding-top: 50px;
+}
+.footer_left_content {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    padding-left: 20px; /* 左右の余白 */
 }
-.footer_address {
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+
+.footer_address ul {
+    list-style: none;
+    padding: 0;
 }
 .footer_address li a {
     color: #000;
     text-decoration: none;
     font-size: 16px;
-    line-height: 2.2; /* 行間を広げる */
+    line-height: 2.2;
     display: block;
     letter-spacing: 0.1em;
 }
@@ -774,34 +843,59 @@ footer {
 .copy {
     color: #000;
     font-size: 14px;
+    margin-top: 30px;
 }
 /* PAGE TOP */
-.pagetop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 125px;
+.pagetop_in_footer {
+    position: absolute; /* .footer_innerを基準に配置 */
+    top: 0;
+    right: 0;
+    width: 130px; /* サイズを調整 */
+    height: 130px;
+    margin-right: 50px;
 }
 
-.pagetop img {
+.pagetop_in_footer a {
+    position: relative;
+    display: block;
     width: 100%;
-    height: auto;
-}
-.pegetop-frame{
-    position: absolute;
-    bottom: 150px;
-    width: 145px;
-    height: auto;
-
-}
-.pegetop-wood{
-    margin-bottom: 150px;
+    height: 100%;
 }
 
-.footer_logo {
+/* PAGE TOPの枠画像 (top_scroll.png) */
+.pagetop-frame {
     position: absolute;
-    bottom: -50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* 観葉植物のイラスト (wood.PNG) */
+.pagetop-wood {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* 枠内に収まるようにサイズ調整 */
+    height: 50%;
+    object-fit: contain;
+}
+/* ロゴ (TAILORED JOY) */
+.footer_logo_container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* コンテンツの下、背景の上 */
+    width: 100%;
     max-width: 1440px;
+    text-align: center;
+}
+
+.footer_logo_container .footer_main_logo {
+    width: 800px; /* 見本に合わせて大きく表示 */
     height: auto;
-    z-index: 0; /* 最背面の装飾に */
+    /* ロゴが下端に少しはみ出すようならマージンで調整 */
+    margin-bottom: -50px; 
 }
