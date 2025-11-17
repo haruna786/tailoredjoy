@@ -188,6 +188,7 @@ header{
     right: 10px;
     z-index: 9999;/* 最大値 */
     cursor: pointer;
+    position: fixed;
 }
 
 .hamburger-sp span {
@@ -379,6 +380,13 @@ width: 300px;
 height: 300px;
 }
 
+@media screen and (max-width: 768px) {
+.illust-fv{
+width: 115px;
+height: 115px;
+}
+}
+
 /* コンセプト */
 /* 見出しの画像 */
 .h3{
@@ -413,12 +421,18 @@ height:auto;
     margin: 0 auto;
 }
 
-.concept-catchphrase {
+.concept-catchphrase_PC {
+    display: block;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 40px;
     line-height: 1.5;
 }
+
+.concept-catchphrase_SP {
+    display: none;
+}
+
 .concept-text {
     width: 100%;
     max-width: 545px;
@@ -446,6 +460,7 @@ height:auto;
     position: relative;
     width: 200px; /* 犬のイラストの幅に合わせて調整 */
     margin: 0 auto;
+    cursor: pointer;
 }
 
 /* wan テキスト */
@@ -493,6 +508,102 @@ height:auto;
     z-index: 0; /* コンテンツの背後に配置 */
 }
 
+@media screen and (max-width: 768px) {
+
+#concept {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.concept-inner {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.heading_h3 {
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.heading_h3 .concept-h3 {
+    width: 80px;
+    margin: 0 auto;
+}
+
+.concept-catchphrase_SP {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 75px;
+    line-height: 2.1;
+    font-weight: bold;
+}
+
+.concept-catchphrase_PC {
+    display: none;
+}
+
+.concept-text {
+    text-align: left;
+    font-size: 14px;
+    max-width: 500px;
+}
+
+.viewmore-button-link {
+    display: inline-block;
+    width: 270px;
+    margin-bottom: 80px;
+}
+
+.viewmore_buttton {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 64px;
+}
+
+.dog-illustration-container {
+    width: 80px;
+    margin: 0 auto;
+}
+
+.dog-callout {
+    position: absolute;
+    padding-top: 0px;
+    margin-left: -15px;
+    font-size: 8px;
+    white-space: nowrap;
+}
+.dog-callout span::before{
+    content: ""; /* 要素として認識させるコード */
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: 17px;
+    left: 0px;
+    transform: rotate(35deg);
+}
+.dog-callout span::after{
+    content: ""; /* 要素として認識させるコード */
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: -15px;
+    left: -1px;
+    transform: rotate(-35deg);
+}
+.dot-sidebar {
+    position: absolute;
+    transform: rotate(90deg);
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 145px;
+    z-index: 1;
+}
+}
+
 /* ナビゲーション */
 .header_nav2 ul{
     display: flex;
@@ -500,6 +611,12 @@ height:auto;
     gap: 55px;
     margin-right: 73px;
     padding-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+.header_nav2 ul{
+    display: none;
+}
 }
 
 /* ワークス */
@@ -533,18 +650,17 @@ height:auto;
     padding: 80px 0 0; /* 上部の余白と左右のパディング */
 }
 
-.works_content_wrapper .heading_h2 {
+.works-title_big {
     position: absolute;
     z-index: 1;
-    text-align: left;
-    padding-top: 0px; /* 上部の余白 */
-    margin-bottom: 50px; /* スライダーとの間隔 */
-    left: 10%;
-}
-
-.works_content_wrapper .heading_h2 img {
     width: 250px;
     height: auto;
+    margin-bottom: 50px; /* スライダーとの間隔 */
+    left: 10%
+}
+
+.works-title_small{
+    display: none;
 }
 
 /* --- slick部分 --- */
@@ -603,7 +719,7 @@ height:auto;
     max-width: 1440px;
     width: 200px;
     height: auto;
-    margin: -30px 35% 0 65%;
+    left: 50%;
     text-align: center;
     z-index: 1;
     position: relative; /* 背景の上に配置するため */
@@ -614,6 +730,104 @@ height:auto;
     height: auto;
     display: block;
 }
+
+@media screen and (max-width: 768px) {
+.works-back {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    max-width: 768px;
+    margin: 120px 30px;
+    z-index: 0; /* 最背面 */
+}
+.works-back img {
+    width: 230px;
+    height: 410px;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.works_content_wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 90px 0 0; /* 上部の余白と左右のパディング */
+}
+
+.works-title_big{
+    display: none;
+}
+
+.works-title_small{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 80px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    left: 0%
+}
+
+/* slick部分 */
+.works_image{
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    width: 100%;
+    padding: 30px 0; /* 中央の画像が大きくなる分の余白 */
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.image img {
+    width: auto;
+    height: 250px;
+    display: block;
+    object-fit: cover; /* 親要素全体を覆うように表示 */
+    padding: 10px;
+    background-color: #fff;
+    gap: 0px;
+    margin: 0 auto;
+}
+.slick-dots{
+    display: none;
+}
+.slick-dots li{
+    display: none;
+}
+.slick-next {
+    margin: 150px 83% 0px 17%;
+    max-width: 1440px;
+    color: #000;
+    width: 50px;
+    height: 50px;
+}
+.slick-prev {
+    margin: 150px 85% 0px 15%;
+    max-width: 1440px;
+    color: #000;
+
+}
+
+.view-all-link {
+    display: block;
+    max-width: 768px;
+    width: 160px;
+    height: auto;
+    left: 50%;
+    text-align: center;
+    z-index: 1;
+    position: relative; /* 背景の上に配置するため */
+}
+
+.view-all-link img {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+}
+
 
 /* ワークス下のイラスト */
 .works_underillust{
@@ -663,13 +877,17 @@ height:auto;
     z-index: 2; /* 背景や装飾より手前に */
 }
 
-.about-h2 {
+.about-title_big {
     position: absolute;
     top: -100px;
     right: 0;
     width: 307px;
     height: auto;
     margin: 0 auto; /* 親要素のmarginをリセット */
+}
+
+.about-title_small{
+    display: none;
 }
 
 .about-left {
@@ -732,6 +950,104 @@ height:auto;
     width: 100%;
     height: auto;
     display: block;
+}
+
+@media screen and (max-width: 767px) {
+
+.about-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 640px;
+    text-align: right;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.about-dots {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: auto;
+    z-index: -1;
+}
+
+.about-main-content {
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.heading_h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.about-title_small {
+    display: block;
+    width: 120px; /* SP用にサイズを小さくする */
+    height: auto;
+    margin: 0 auto;
+}
+.about-title_big{
+    display: none;
+}
+
+/* 左右のdivを縦に積み重ねるため、floatやflexの指定を解除 */
+.about-left, .about-right {
+    width: 100%;
+    margin-top: 50px;
+    float: none;
+}
+
+.about-me {
+    width: 130px;
+    height: 145px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を付けて立体感 */
+}
+
+
+.name {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    display: grid;
+}
+.name-en {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+}
+.name-jp {
+    font-size: 10px;
+}
+
+    /* -----------------------------------
+    紹介文とボタン
+    ----------------------------------- */
+    /* 紹介文（description） */
+    .description {
+        text-align: left; /* 紹介文は左寄せまたは中央にまとめる */
+        margin-bottom: 30px;
+    }
+    .description p {
+        font-size: 14px;
+        line-height: 1.8; /* 行間を広げて読みやすく */
+    }
+
+    /* VIEW MOREボタン */
+    .about-viewmore-link {
+        display: block;
+        text-align: center;
+        width: 150px; /* ボタン幅を固定 */
+        margin: 0 auto; /* 中央寄せ */
+    }
+    .about-viewmore-link img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* コンタクト */
@@ -802,13 +1118,13 @@ footer {
 }
 .footer-dots {
     position: absolute;
-    top: 0;
+    top: -5%;
     right: 0;
     left: auto; /* 左からの指定を解除 */
-    width: 600px; /* サイズを調整 */
-    height: 120px;
+    width: 60%; /* サイズを調整 */
+    height: 60px;
     object-fit: cover;
-    z-index: 1;
+    z-index: 2;
 }
 .footer_inner {
     position: relative;
@@ -819,18 +1135,17 @@ footer {
     justify-content: space-between; /* 左右のコンテンツを離す */
     align-items: flex-start;
     padding-top: 50px;
+    padding-left: 20px;
 }
 .footer_left_content {
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-left: 20px; /* 左右の余白 */
+    padding-left: 5%;
+    padding-bottom: 20px;
 }
 
-.footer_address ul {
-    list-style: none;
-    padding: 0;
-}
 .footer_address li a {
     color: #000;
     text-decoration: none;
@@ -848,11 +1163,10 @@ footer {
 /* PAGE TOP */
 .pagetop_in_footer {
     position: absolute; /* .footer_innerを基準に配置 */
-    top: 0;
-    right: 0;
+    top: 50px;
+    right: 50px;
     width: 130px; /* サイズを調整 */
     height: 130px;
-    margin-right: 50px;
 }
 
 .pagetop_in_footer a {
@@ -865,37 +1179,27 @@ footer {
 /* PAGE TOPの枠画像 (top_scroll.png) */
 .pagetop-frame {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 35%;
+    left: 60%;
+    width: 50%;
+    height: 50%;
     object-fit: contain;
 }
 /* 観葉植物のイラスト (wood.PNG) */
 .pagetop-wood {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%; /* 枠内に収まるようにサイズ調整 */
-    height: 50%;
+    top: 45%;
+    left: 70%;
+    width: 30%;
+    height: 30%;
     object-fit: contain;
 }
-/* ロゴ (TAILORED JOY) */
-.footer_logo_container {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2; /* コンテンツの下、背景の上 */
-    width: 100%;
-    max-width: 1440px;
-    text-align: center;
-}
 
-.footer_logo_container .footer_main_logo {
-    width: 800px; /* 見本に合わせて大きく表示 */
-    height: auto;
-    /* ロゴが下端に少しはみ出すようならマージンで調整 */
-    margin-bottom: -50px; 
+.footer_logo{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.footer_logo img{
+    width: 85%;
 }
