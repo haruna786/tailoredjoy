@@ -842,6 +842,13 @@ height:auto;
     margin-top: 50px;
 }
 
+@media screen and (max-width: 768px) {
+.image2 img{
+    width: 50px;
+    height: auto;
+}
+}
+
 /* アバウト */
 #about {
     position: relative;
@@ -957,10 +964,10 @@ height:auto;
 .about-back {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 320px;
-    height: 640px;
-    text-align: right;
+    right: 0;
+    left: auto;
+    width: 80%;
+    height: 95%;
     object-fit: cover;
     z-index: -2;
 }
@@ -977,6 +984,9 @@ height:auto;
     display: block;
     max-width: 400px;
     margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .heading_h2 {
@@ -985,7 +995,7 @@ height:auto;
 }
 .about-title_small {
     display: block;
-    width: 120px; /* SP用にサイズを小さくする */
+    width: 120px;
     height: auto;
     margin: 0 auto;
 }
@@ -993,23 +1003,24 @@ height:auto;
     display: none;
 }
 
-/* 左右のdivを縦に積み重ねるため、floatやflexの指定を解除 */
-.about-left, .about-right {
+.about-left {
     width: 100%;
-    margin-top: 50px;
-    float: none;
+    margin-bottom: 20px;
 }
 
 .about-me {
     width: 130px;
     height: 145px;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を付けて立体感 */
+    display: block;
+    margin: 0 auto;
+}
+.about-right {
+    width: 100%;
 }
 
-
 .name {
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
     padding-bottom: 15px;
     display: grid;
@@ -1018,24 +1029,20 @@ height:auto;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    letter-spacing: 0.1em;
 }
 .name-jp {
     font-size: 10px;
 }
 
-    /* -----------------------------------
-    紹介文とボタン
-    ----------------------------------- */
-    /* 紹介文（description） */
-    .description {
-        text-align: left; /* 紹介文は左寄せまたは中央にまとめる */
-        margin-bottom: 30px;
-    }
-    .description p {
-        font-size: 14px;
-        line-height: 1.8; /* 行間を広げて読みやすく */
-    }
+.description {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.description p {
+    font-size: 14px;
+    line-height: 1.8; /* 行間を広げて読みやすく */
+}
 
     /* VIEW MOREボタン */
     .about-viewmore-link {
@@ -1107,7 +1114,22 @@ button:hover {
     border: 1px solid #000;
 }
 
+@media screen and (max-width: 767px) {
+#contact{
+    display: none;
+}
+
+}
+
 /* --- フッター--- */
+.footer_sp_content,
+.footer_logo_sp,
+.footer_contact_sp,
+.footer_nav_sp,
+.copy_sp {
+    display: none;
+}
+
 footer {
     border-top: 7px solid #000;
     position: relative;
@@ -1202,4 +1224,107 @@ footer {
 }
 .footer_logo img{
     width: 85%;
+}
+
+@media screen and (max-width: 768px) {
+
+.footer-dots,
+.footer_inner,
+.pagetop_footer,
+.footer_logo{
+    display: none ;
+}
+
+footer {
+    background-color: #7b6c5f;
+    padding: 40px 20px;
+    text-align: center;
+    display: block;
+    position: relative; /* z-indexの基準 */
+}
+
+.footer_sp_content {
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+
+    /* .footer_logo_sp {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 20px 0; 
+        background-color: #4a423d; 
+        box-sizing: border-box;
+    }
+    .footer_logo_sp img {
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    } */
+
+
+    /* .footer_contact_sp {
+        margin-bottom: 40px;
+        width: 100%;
+        max-width: 250px;
+    }
+    .footer_contact_sp img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    .footer_nav_sp {
+        width: 100%;
+    }
+    .footer_nav_sp ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .footer_nav_sp li {
+        width: 100%;
+    }
+    
+    .footer_nav_sp li + li { 
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .footer_nav_sp li:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .footer_nav_sp a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        display: block;
+        padding: 15px 0; 
+        letter-spacing: 0.1em;
+        transition: background-color 0.2s, color 0.2s;
+    } */
+
+    /* --- TOPの初期スタイル（アクティブ/ホバーの例） --- */
+    /* .footer_nav_sp li:first-child,
+    .footer_nav_sp a:hover
+    {
+        background-color: #e0e0e0; 
+        color: #333; 
+    }
+
+    .copy_sp {
+        display: block;
+        font-size: 12px;
+        color: #ccc;
+        margin-top: 40px;
+    } */
 }

@@ -4,10 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* 145/1920=0.0755 */
-    padding-right: 7.6%;
-    /* 56/1920=0.029 */
-    padding-left: 2.9%;
+    /* padding-right: 7.6%;
+    padding-left: 2.9%; */
     position: absolute;
     width: 100%;
     z-index: 9999;/* 最大値 */
@@ -19,21 +17,17 @@
 }
 
 .header_nav a {
-    color: #fff;
-    font-family:  "Bebas Kai","游ゴシック体", YuGothic, "游ゴシック Medium",
-    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: bold;
+    color: #000;
     font-size : 18px;
 }
 
 .logo{
-    width : 227px;
+    width : 230px;
+    height: auto;
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 50px;
     z-index: 9999;
-    /* 値が大きいほど、他の要素の上に重なって表示 */
 }
-
 
 .hamburger,
 .header_nav-sp{
@@ -53,78 +47,230 @@
 
 /* SP Ver */
 @media screen and (max-width: 1100px) {
-    .header_nav{
+.header_nav{
         display: none;
-    }
-    .hamburger{
-        display: block;
-        width: 30px;
-        height:30px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 9999;/* 最大値 */
-        cursor: pointer;
-    }
-    .hamburger span {
-        width: 30px;
-        height: 3px;
-        background-color: #fff;
-        position: absolute;
-        top: 14px;
-        transition: 0.3s;
-    }
+}
+.hamburger{
+    display: block;
+    width: 100px;
+    height:70px;
+    background-color: #000;
+    border-radius: 25px;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    z-index: 9999;/* 最大値 */
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 32px;
+    left: 25px;
+    transition: 0.3s;
+}
+
  /* 擬似要素 */
 .hamburger span::before{
-        content: ""; /* 要素として認識させるコード */
-        width: 30px;
-        height: 3px;
-        background-color: #fff;
-        position: absolute;
-        top: -14px;
-        transition: 0.3s;
-    }
-    .hamburger span::after{
-        content: ""; /* 要素として認識させるコード */
-        width: 30px;
-        height: 3px;
-        background-color: #fff;
-        position: absolute;
-        bottom: -14px;
-        transition: 0.3s;
-    }
-    .open span{
-        background-color: transparent;
-    }
-    .open span::before{
-        transform: rotate(45deg);
-        top:0; /*元々同じ位置にあったものをさっきずらしたのを戻した */
-    }
+     content: ""; /* 要素として認識させるコード */
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: -14px;
+    transition: 0.3s;
+}
+.hamburger span::after{
+    content: ""; /* 要素として認識させるコード */
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -14px;
+    transition: 0.3s;
+}
 
-    .open span::after{
-        transform: rotate(-45deg);
-        bottom:0;
-    }
-    .header_nav-sp{
+.open span{
+    background-color: transparent;
+}
+
+.open span::before{
+    transform: rotate(45deg);
+    top:0; /*元々同じ位置にあったものをさっきずらしたのを戻した */
+}
+
+.open span::after{
+    transform: rotate(-45deg);
+    bottom:0;
+}
+.header_nav-sp{
     position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: #000000bb;
+    background-color: #c3c3c3;
     z-index: 9998;
 }
+
 .header_nav-sp ul{
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
-.header_nav-sp li{
-    color: #fff;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
-    "游ゴシック", "Yu Gothic", sans-serif;
 }
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* メインコンテンツの全体設定 */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 50px 20px; /* ヘッダーと被らないよう上部に十分な余白 */
+    position: relative;
+    z-index: 2;
+}
+
+/* コンセプトセクション */
+.concept-section {
+    padding-top: 40px;
+}
+
+.concept-h1-pc{
+    width: 40%;
+    padding-bottom: 50px;
+}
+
+.concept-h1-sp{
+    display: none;
+}
+
+.heading_h2{
+    text-align: center;
+    margin: 50px;
+
+}
+
+.heading_h2 .concept-h2 {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.concept-catchphrase_PC {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.concept-catchphrase_SP {
+    display: none;
+}
+
+.concept-text {
+    width: 100%;
+    max-width: 545px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.creation-process {
+    padding-top: 50px;
+}
+
+.process-title {
+    margin-left: 10%;
+    padding-bottom: 50px;
+    display: table; /* 中央寄せと幅の自動調整のためにtableを使用 */
+}
+
+.process-list {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.process-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+}
+
+.step-label-container {
+    flex-shrink: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    z-index: 1;
+}
+
+.step-label {
+    font-weight: 700;
+    margin-top: 10px;
+    padding-right: 50px; /* 番号との間隔 */
+    text-align: right;
+}
+
+.step-content {
+    padding-left: 80px;
+    position: relative;
+    max-width: 60%;
+}
+
+/* コンテンツ内の画像とテキスト */
+.image-placeholder {
+    width: 100%;
+    max-width: 300px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: #666;
+    overflow: hidden;
+}
+
+.step-content p {
+    margin: 0;
 }
