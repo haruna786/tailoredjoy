@@ -1,0 +1,90 @@
+/*
+ * TAILORED JOY - WORKS LP カスタムスタイル
+ * Tailwind CSSの代わりに、カスタムカラーをCSS変数として定義し、その他の特殊な表現を定義します。
+ */
+
+/* 1. CSS変数 (旧Tailwindカスタムカラー) の定義 */
+:root {
+    --custom-bg-color: #e0e8eb;     /* 全体背景色 */
+    --custom-frame-color: #2f6890;  /* 青い枠の境界色 */
+    --custom-dark-color: #333333;   /* 通常のダークカラー */
+    --custom-gray-medium: #a0aec0;  /* スクロールバーの色 */
+}
+
+/* 2. HTML要素への適用 (HTMLのカスタムクラスがTailwindに依存しなくなったため) */
+
+.custom-bg {
+    background-color: var(--custom-bg-color);
+}
+.custom-frame {
+    border-color: var(--custom-frame-color);
+}
+.text-custom-frame {
+    color: var(--custom-frame-color);
+}
+.text-custom-dark {
+    color: var(--custom-dark-color);
+}
+.border-custom-dark {
+    border-color: var(--custom-dark-color);
+}
+.bg-custom-dark {
+    background-color: var(--custom-dark-color);
+}
+
+/* 3. 特殊なレイアウト・表現 */
+
+/* WORKSセクションのコンテナ。ビューポートの高さに基づいて高さを固定 */
+.works-container {
+    height: 85vh; /* ビューポートの85%を占める高さ */
+    max-height: 900px;
+    /* スクロールバーの幅を調整（任意） */
+    scrollbar-width: thin;
+}
+
+/* WORKSタイトルのテクスチャ風表現（影とグリッド） */
+.works-title {
+    line-height: 1;
+    font-weight: 900;
+    /* ざらつき感を出すための影の工夫 */
+    text-shadow: 
+        1px 1px 0 rgba(255, 255, 255, 0.4),
+        -1px -1px 0 rgba(0, 0, 0, 0.2),
+        2px 2px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.1em;
+    /* 背景のドット柄の表現（画像下部のデザインを模倣） */
+    background-image: radial-gradient(var(--custom-dark-color) 1px, transparent 1px);
+    background-size: 4px 4px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* テキストの色を透明にして背景を適用 */
+}
+
+/* 右側のスクロールエリアにカスタムスクロールバーを適用 (Webkit) */
+.works-right-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+.works-right-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--custom-gray-medium); /* スクロールバーの色 */
+    border-radius: 10px;
+}
+
+/* 黒いボタンのスタイル (ホバーアニメーション) */
+.category-button {
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.category-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* フッターの大きなTAILORED JOYの文字の表現 */
+.footer-logo-large {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 900;
+    color: #333;
+    opacity: 0.15;
+    letter-spacing: 0.1em;
+    text-shadow: 4px 4px 0 #fff, 8px 8px 0 rgba(0,0,0,0.1);
+}

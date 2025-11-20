@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailored Joy</title>
+    <!-- リセットcss読み込み -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- デザインcss読み込み -->
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/works.css" />
+    <!-- slick読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- lightbox読み込み -->
+    <link href="./dist/css/lightbox.min.css" rel="stylesheet">
+</head>
+
+<body class="custom-bg min-h-screen">
+
+    <!-- 1. グローバルヘッダー (上部固定ナビゲーション) -->
+    <header class="sticky top-0 z-10 bg-white/90 backdrop-blur-sm shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 md:px-8">
+            <h1 class="text-xl font-bold text-custom-dark tracking-wider">TAILORED JOY</h1>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-custom-dark">
+                <a href="#" class="hover:text-custom-frame transition duration-150">TOP</a>
+                <a href="#" class="hover:text-custom-frame transition duration-150">CONCEPT</a>
+                <a href="#" class="text-custom-frame font-bold">WORKS</a>
+                <a href="#" class="hover:text-custom-frame transition duration-150">ABOUT</a>
+                <a href="#" class="hover:text-custom-frame transition duration-150">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. メインコンテンツエリア (青い枠) -->
+    <main class="py-12 px-4 flex justify-center">
+        <!-- works-container, custom-frame のスタイルはカスタムCSSへ移動 -->
+        <div
+            class="works-container max-w-6xl w-full p-8 md:p-12 border-4 custom-frame bg-white rounded-[4rem] shadow-2xl flex flex-col md:flex-row">
+
+            <!-- 左側: WORKSタイトルと黒いボタン (固定要素) -->
+            <div class="works-left-fixed w-full md:w-1/4 flex-shrink-0 pr-0 md:pr-10 mb-8 md:mb-0">
+                <div class="sticky top-12 md:top-0 md:pt-4 md:h-full flex flex-col items-start md:items-center">
+                    <!-- WORKSタイトル (works-title のスタイルはカスタムCSSへ移動) -->
+                    <h2 class="works-title text-5xl md:text-7xl mb-12">WORKS</h2>
+
+                    <!-- カテゴリボタン群 (category-button のスタイルはカスタムCSSへ移動) -->
+                    <div class="space-y-3 w-40">
+                        <button
+                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">ALL</button>
+                        <button
+                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">WEB</button>
+                        <button
+                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">LP</button>
+                        <button
+                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">MOVIE</button>
+                        <button
+                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">ILLUST</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右側: 作品リスト (スクロール可能な要素) -->
+            <!-- works-right-scroll のスタイルはカスタムCSSへ移動 -->
+            <div class="works-right-scroll w-full md:w-3/4 flex-grow pl-0 md:pl-10 overflow-y-auto">
+
+                <!-- セクション: WEB SITE -->
+                <section class="mb-16">
+                    <h3 class="text-lg font-bold border-b border-custom-dark pb-1 mb-8">WEBSITE</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- 作品カード1 -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">TAILORED JOY (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">ポートフォリオ</p>
+                        </div>
+                        <!-- 作品カード2 (ダミー) -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">Webサイト2 (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">企業サイト</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- セクション: LP -->
+                <section class="mb-16">
+                    <h3 class="text-lg font-bold border-b border-custom-dark pb-1 mb-8">LP</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- 作品カード3 -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">美容LP (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">美容液LP</p>
+                        </div>
+                        <!-- 作品カード4 -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">コーヒーLP (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">コーヒーショップLP</p>
+                        </div>
+                        <!-- 作品カード5 -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">コワーキングLP (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">コワーキングスペースLP</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- セクション: MOVIE (スクロールを発生させるためコンテンツをさらに追加) -->
+                <section class="mb-16">
+                    <h3 class="text-lg font-bold border-b border-custom-dark pb-1 mb-8">MOVIE</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- 作品カード6 -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">ハンバーガー動画 (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">ハンバーガー</p>
+                        </div>
+                        <!-- 作品カード7 -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">アイスクリーム動画 (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">アイスクリーム</p>
+                        </div>
+                        <!-- 作品カード8 -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">スマホ販促動画 (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">スマホ販促</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- セクション: ILLUST -->
+                <section class="mb-8">
+                    <h3 class="text-lg font-bold border-b border-custom-dark pb-1 mb-8">ILLUST</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- 作品カード9 -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">イラストA (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">イラスト</p>
+                        </div>
+                        <!-- 作品カード10 -->
+                        <div class="space-y-2">
+                            <div
+                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
+                                <span class="text-sm text-gray-500">動物イラスト (サンプル)</span>
+                            </div>
+                            <p class="text-sm font-medium">動物のスケッチ</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- スクロール可能な領域の終端に余白を追加 -->
+                <div class="h-16"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img src="./images/dotto_rectangle.png" alt="ドットの装飾" class="footer-dots">
+
+        <div class="footer_sp_content">
+            <div class="footer_logo_sp">
+                <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY">
+            </div>
+            <div class="footer_contact_sp">
+                <a href="#contact">
+                    <img src="./images/contact_button.png" alt="CONTACT">
+                </a>
+            </div>
+            <nav class="footer_nav_sp">
+                <ul>
+                    <li><a href="#top">TOP</a></li>
+                    <li><a href="#concept">CONCEPT</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </nav>
+            <p class="copy_sp">&copy; haruna_ikeda.portfolio</p>
+        </div>
+
+        <div class="footer_inner">
+            <div class="footer_left_content">
+                <div class="footer_address">
+                    <ul>
+                        <li><a href="#top">TOP</a></li>
+                        <li><a href="#concept">CONCEPT</a></li>
+                        <li><a href="#works">WORKS</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                    </ul>
+                </div>
+                <p class="copy">&copy; haruna_ikeda.portfolio</p>
+            </div>
+            <div class="pagetop_footer">
+                <a href="#header">
+                    <img src="./images/top_scroll.png" alt="PAGE TOP" class="pagetop-frame" />
+                    <img src="./images/wood.PNG" alt="観葉植物のイラスト" class="pagetop-wood" />
+                </a>
+            </div>
+        </div>
+
+        <div class="footer_logo">
+            <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY">
+        </div>
+    </footer>
+
+    <!-- JQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- lightbox読み込み -->
+    <script src="./dist/js/lightbox-plus-jquery.min.js"></script>
+    <!-- slick読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Tailwindの設定をインラインで読み込み (カスタムカラー定義) -->
+    <script>
+        // ハンバーガーメニュー
+        $(function () {
+            $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                // $(".header_nav").fadeToggle();
+            })
+        })
+
+        $(function () {
+            $(".hamburger-sp").click(function () {
+                $(".hamburger-sp").toggleClass("open-sp");
+                $(".header_nav-sp").fadeToggle();
+            })
+        })
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-bg': '#e0e8eb', /* 全体背景色 */
+                        'custom-frame': '#2f6890', /* 青い枠の境界色 */
+                        'custom-dark': '#333333', /* 通常のダークカラー */
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
