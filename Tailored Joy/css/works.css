@@ -1,90 +1,126 @@
-/*
- * TAILORED JOY - WORKS LP カスタムスタイル
- * Tailwind CSSの代わりに、カスタムカラーをCSS変数として定義し、その他の特殊な表現を定義します。
- */
-
-/* 1. CSS変数 (旧Tailwindカスタムカラー) の定義 */
-:root {
-    --custom-bg-color: #e0e8eb;     /* 全体背景色 */
-    --custom-frame-color: #2f6890;  /* 青い枠の境界色 */
-    --custom-dark-color: #333333;   /* 通常のダークカラー */
-    --custom-gray-medium: #a0aec0;  /* スクロールバーの色 */
+/* ヘッダー部分 */
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-right: 7.6%;
+    padding-left: 2.9%; */
+    position: absolute;
+    width: 100%;
+    z-index: 9999;/* 最大値 */
 }
 
-/* 2. HTML要素への適用 (HTMLのカスタムクラスがTailwindに依存しなくなったため) */
-
-.custom-bg {
-    background-color: var(--custom-bg-color);
-}
-.custom-frame {
-    border-color: var(--custom-frame-color);
-}
-.text-custom-frame {
-    color: var(--custom-frame-color);
-}
-.text-custom-dark {
-    color: var(--custom-dark-color);
-}
-.border-custom-dark {
-    border-color: var(--custom-dark-color);
-}
-.bg-custom-dark {
-    background-color: var(--custom-dark-color);
+.header_nav ul {
+    display: flex;
+    gap : 75px;
 }
 
-/* 3. 特殊なレイアウト・表現 */
-
-/* WORKSセクションのコンテナ。ビューポートの高さに基づいて高さを固定 */
-.works-container {
-    height: 85vh; /* ビューポートの85%を占める高さ */
-    max-height: 900px;
-    /* スクロールバーの幅を調整（任意） */
-    scrollbar-width: thin;
+.header_nav a {
+    color: #000;
+    font-size : 18px;
 }
 
-/* WORKSタイトルのテクスチャ風表現（影とグリッド） */
-.works-title {
-    line-height: 1;
-    font-weight: 900;
-    /* ざらつき感を出すための影の工夫 */
-    text-shadow: 
-        1px 1px 0 rgba(255, 255, 255, 0.4),
-        -1px -1px 0 rgba(0, 0, 0, 0.2),
-        2px 2px 2px rgba(0, 0, 0, 0.1);
-    letter-spacing: 0.1em;
-    /* 背景のドット柄の表現（画像下部のデザインを模倣） */
-    background-image: radial-gradient(var(--custom-dark-color) 1px, transparent 1px);
-    background-size: 4px 4px;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; /* テキストの色を透明にして背景を適用 */
+.logo{
+    width : 230px;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 50px;
+    z-index: 9999;
 }
 
-/* 右側のスクロールエリアにカスタムスクロールバーを適用 (Webkit) */
-.works-right-scroll::-webkit-scrollbar {
-    width: 8px;
-}
-.works-right-scroll::-webkit-scrollbar-thumb {
-    background-color: var(--custom-gray-medium); /* スクロールバーの色 */
-    border-radius: 10px;
+.hamburger,
+.header_nav-sp{
+    display: none;
 }
 
-/* 黒いボタンのスタイル (ホバーアニメーション) */
-.category-button {
-    transition: all 0.2s;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+/* slick */
+.slick-dots {
+    bottom: 0px;
 }
-.category-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+.slick-dots li button:before {
+    color: #fff;
 }
 
-/* フッターの大きなTAILORED JOYの文字の表現 */
-.footer-logo-large {
-    font-size: clamp(3rem, 10vw, 8rem);
-    font-weight: 900;
-    color: #333;
-    opacity: 0.15;
-    letter-spacing: 0.1em;
-    text-shadow: 4px 4px 0 #fff, 8px 8px 0 rgba(0,0,0,0.1);
+/* SP Ver */
+@media screen and (max-width: 1100px) {
+.header_nav{
+        display: none;
+}
+.hamburger{
+    display: block;
+    width: 100px;
+    height:70px;
+    background-color: #000;
+    border-radius: 25px;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    z-index: 9999;/* 最大値 */
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 32px;
+    left: 25px;
+    transition: 0.3s;
+}
+
+ /* 擬似要素 */
+.hamburger span::before{
+     content: ""; /* 要素として認識させるコード */
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: -14px;
+    transition: 0.3s;
+}
+.hamburger span::after{
+    content: ""; /* 要素として認識させるコード */
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -14px;
+    transition: 0.3s;
+}
+
+.open span{
+    background-color: transparent;
+}
+
+.open span::before{
+    transform: rotate(45deg);
+    top:0; /*元々同じ位置にあったものをさっきずらしたのを戻した */
+}
+
+.open span::after{
+    transform: rotate(-45deg);
+    bottom:0;
+}
+.header_nav-sp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #c3c3c3;
+    z-index: 9998;
+}
+
+.header_nav-sp ul{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 }
