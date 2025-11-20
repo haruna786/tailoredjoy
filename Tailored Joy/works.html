@@ -51,149 +51,112 @@
         </nav>
     </header>
 
-    <!-- 2. メインコンテンツエリア (青い枠) -->
-    <main class="py-12 px-4 flex justify-center">
-        <!-- works-container, custom-frame のスタイルはカスタムCSSへ移動 -->
-        <div
-            class="works-container max-w-6xl w-full p-8 md:p-12 border-4 custom-frame bg-white rounded-[4rem] shadow-2xl flex flex-col md:flex-row">
-
-            <!-- 左側: WORKSタイトルと黒いボタン (固定要素) -->
-            <div class="works-left-fixed w-full md:w-1/4 flex-shrink-0 pr-0 md:pr-10 mb-8 md:mb-0">
-                <div class="sticky top-12 md:top-0 md:pt-4 md:h-full flex flex-col items-start md:items-center">
-                    <!-- WORKSタイトル (works-title のスタイルはカスタムCSSへ移動) -->
-                    <h2 class="works-title text-5xl md:text-7xl mb-12">WORKS</h2>
-
-                    <!-- カテゴリボタン群 (category-button のスタイルはカスタムCSSへ移動) -->
-                    <div class="space-y-3 w-40">
-                        <button
-                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">ALL</button>
-                        <button
-                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">WEB</button>
-                        <button
-                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">LP</button>
-                        <button
-                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">MOVIE</button>
-                        <button
-                            class="category-button bg-black text-white w-full h-12 rounded-full font-bold text-xs tracking-widest uppercase">ILLUST</button>
-                    </div>
+    <!-- works 青い部分 -->
+    <main class="works-all">
+        <div class="works-inner">
+            <!-- 左側 -->
+            <div class="works-left">
+                <h1 class="works-title">
+                    <img src="./images/works_title-big.png" alt="works">
+                </h1>
+                <div class="button-all">
+                    <button class="category-button"><img src="./images/works-btn-all.png" alt="all"><a
+                            href="#all"></a></button>
+                    <button class="category-button"><img src="./images/works-btn-website.png" alt="website"><a
+                            href="#website"></a></button>
+                    <button class="category-button"><img src="./images/works-btn-lp.png" alt="lp"><a
+                            href="#lp"></a></button>
+                    <button class="category-button"><img src="./images/works-btn-banner.png" alt="banner"><a
+                            href="#banner"></a></button>
+                    <button class="category-button"><img src="./images/works-btn-illust.png" alt="illust"><a
+                            href="#illust"></a></button>
                 </div>
             </div>
 
-            <!-- 右側: 作品リスト (スクロール可能な要素) -->
-            <!-- works-right-scroll のスタイルはカスタムCSSへ移動 -->
-            <div class="works-right-scroll w-full md:w-3/4 flex-grow pl-0 md:pl-10 overflow-y-auto">
-
-                <!-- セクション: WEB SITE -->
-                <section class="mb-16">
-                    <h3 class="text-lg font-bold border-b border-custom-dark pb-1 mb-8">WEBSITE</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- 作品カード1 -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">TAILORED JOY (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">ポートフォリオ</p>
-                        </div>
-                        <!-- 作品カード2 (ダミー) -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">Webサイト2 (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">企業サイト</p>
-                        </div>
+            <!-- 右側-->
+            <div class="works-right">
+                <!-- ウェブサイト -->
+                <section id="website">
+                    <h3 class="website-title">WEBSITE</h3>
+                    <!-- 作品1 -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">ポートフォリオ</p>
+                    </div>
+                    <!-- 作品2（空） -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">更新中</p>
                     </div>
                 </section>
 
-                <!-- セクション: LP -->
-                <section class="mb-16">
-                    <h3 class="text-lg font-bold border-b border-custom-dark pb-1 mb-8">LP</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- 作品カード3 -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">美容LP (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">美容液LP</p>
-                        </div>
-                        <!-- 作品カード4 -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">コーヒーLP (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">コーヒーショップLP</p>
-                        </div>
-                        <!-- 作品カード5 -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">コワーキングLP (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">コワーキングスペースLP</p>
-                        </div>
+                <!-- LP -->
+                <section id="lp">
+                    <h3 class="lp-title">LP</h3>
+                    <!-- 作品1 -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">美容室LP</p>
+                    </div>
+                    <!-- 作品2 -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">コーヒーショップ</p>
+                    </div>
+                    <!-- 作品3 -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">コーヒーショップ</p>
+                    </div>
+                    <!-- 作品4（空） -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">更新中</p>
                     </div>
                 </section>
 
-                <!-- セクション: MOVIE (スクロールを発生させるためコンテンツをさらに追加) -->
-                <section class="mb-16">
-                    <h3 class="text-lg font-bold border-b border-custom-dark pb-1 mb-8">MOVIE</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- 作品カード6 -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">ハンバーガー動画 (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">ハンバーガー</p>
-                        </div>
-                        <!-- 作品カード7 -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">アイスクリーム動画 (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">アイスクリーム</p>
-                        </div>
-                        <!-- 作品カード8 -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">スマホ販促動画 (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">スマホ販促</p>
-                        </div>
+                <!-- BANNER -->
+                <section id="banner">
+                    <h3 class="banner-title">BANNER</h3>
+                    <!-- 作品1 -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">ハンバーガー</p>
+                    </div>
+                    <!-- 作品2 -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">アイスクリーム</p>
+                    </div>
+                    <!-- 作品3 -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">スマホ宣伝</p>
+                    </div>
+                    <!-- 作品4（空） -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">更新中</p>
                     </div>
                 </section>
 
-                <!-- セクション: ILLUST -->
-                <section class="mb-8">
-                    <h3 class="text-lg font-bold border-b border-custom-dark pb-1 mb-8">ILLUST</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- 作品カード9 -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">イラストA (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">イラスト</p>
-                        </div>
-                        <!-- 作品カード10 -->
-                        <div class="space-y-2">
-                            <div
-                                class="aspect-[4/3] bg-custom-bg border border-gray-300 rounded-xl overflow-hidden shadow-lg flex items-center justify-center">
-                                <span class="text-sm text-gray-500">動物イラスト (サンプル)</span>
-                            </div>
-                            <p class="text-sm font-medium">動物のスケッチ</p>
-                        </div>
+                <!-- イラスト -->
+                <section id="illust">
+                    <h3 class="illust-title">ILLUST</h3>
+                    <!-- 作品1 -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">イラスト</p>
+                    </div>
+                    <!-- 作品2（空） -->
+                    <div class="space">
+                        <div class="space-back"></div>
+                        <p class="description">似顔絵作成</p>
                     </div>
                 </section>
-
-                <!-- スクロール可能な領域の終端に余白を追加 -->
-                <div class="h-16"></div>
             </div>
+            <!-- スクロール可能な領域の終端に余白を追加 -->
+            <div></div>
         </div>
     </main>
     <footer>

@@ -124,3 +124,65 @@
     gap: 20px;
 }
 }
+/* --------------------------- */
+/* メイン */
+.works-all {
+    display: flex;
+    justify-content: center;
+    padding: 80px 45px;
+    background-color: #a9c4c8;
+}
+
+/* 青い枠 */
+.works-inner {
+    display: flex;
+    width: 100%;
+    padding: 30px 50px;
+    background-color: white;
+    border-radius: 40px;
+    position: relative;
+}
+
+/* 左側固定エリア */
+.works-left {
+    width: 25%;
+    padding-right: 20px;
+}
+
+/* WORKSタイトル画像 */
+.works-title {
+    margin-bottom: 30px;
+}
+.works-title img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* カテゴリボタン */
+.category-button {
+    display: block;
+    width: 100%;
+    height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+.category-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.category-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* 右側スクロールエリア */
+.works-right {
+    flex-grow: 1;
+    width: 75%;
+    padding-left: 50px;
+    padding-top: 10%;
+    overflow-y: auto;
+}
