@@ -134,6 +134,30 @@
     margin: 0 auto;
 }
 
+.section-title-large{
+    text-align: left;
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+
+.section-title-large img {
+    width: 250px;
+    height: auto;
+}
+
+.section-title-small{
+    text-align: center;
+}
+
+.section-title-small .profile{
+    width: 15%;
+    padding-top: 50px;
+}
+
+.section-title-small p{
+    padding-bottom: 50px;
+}
+
 /* プロフィールセクション */
 .profile-section {
     margin-bottom: 80px;
@@ -142,7 +166,7 @@
 
 .profile-content {
     display: flex;
-    gap: 50px;
+    gap: 110px;
 }
 
 .profile-image-wrapper {
