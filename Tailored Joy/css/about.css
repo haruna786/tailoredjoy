@@ -176,6 +176,7 @@
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 20px;
+    top: 10px;
 }
 
 .profile-image {
@@ -196,9 +197,14 @@
 
 .profile-right p {
     margin-top: 5px;
-    margin-bottom: 10px;
     font-size: 20px;
-    line-height: 1.2;
+    line-height: 1.7;
+}
+
+.name{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
 }
 
 /* お気に入りセクション */
@@ -221,8 +227,8 @@
 }
 
 .icon-circle {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border: 1px solid #333;
     border-radius: 50%;
     display: flex;

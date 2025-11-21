@@ -263,7 +263,7 @@ header{
 }
 }
 
-/* コンテナ設定 */
+/* FVエリア*/
 .firstview {
     position: relative;
     width: 100vw;
@@ -310,10 +310,13 @@ header{
     justify-content: center;
     align-items: center;
 }
-.illustration-img{
+.illustration-pc {
     width: 120%;
     vertical-align: bottom;
     border: none;
+}
+.illustration-sp{
+    display: none;
 }
 
 /* 背景画像（テクスチャ） */
@@ -339,7 +342,6 @@ header{
     z-index: 9999;
 }
 
-
 /* "enjoy...!" */
 .enjoy-text {
     position: absolute;
@@ -349,41 +351,35 @@ header{
     white-space: nowrap;
     z-index: 4; /* 最前面 */
 }
-/* "portfolio site" */
-.portfoliosite{
-    display: block;
-    position: absolute;
-}
-
-.portfoliosite img {
-    margin-left: auto;
-    margin-right: 120px;
-    margin-top: 300px;
-    height: 200px;
-    width: auto;
-    object-fit: contain;
-    z-index: 10;
-}
 
 /* 横スクロール部分 */
-.scrool-content{
-display: flex;
-flex-direction: row; /* 左から右に配置 */
-flex-wrap: wrap;/* はみ出す場合に折り返す */
-justify-content: space-between;
-max-width: 960px;
-margin:0 auto;
+.scrool-content {
+    display: flex;
+    flex-direction: row; /* 左から右に配置 */
+    flex-wrap: wrap; /* はみ出す場合に折り返す */
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.illust-fv{
-width: 300px;
-height: 300px;
+.illust-fv {
+    width: 300px;
+    height: 300px;
 }
 
 @media screen and (max-width: 768px) {
 .illust-fv{
 width: 115px;
 height: 115px;
+}
+
+.illustration-sp {
+    display: block;
+    width: 120%;
+    border: none;
+}
+.illustration-pc{
+    display: none;
 }
 }
 
@@ -633,7 +629,7 @@ height:auto;
     width: 100%;
     height: 80%;
     max-width: 1440px;
-    /* padding: 120px 150px 70px; */
+  /* padding: 120px 150px 70px; */
     margin: 120px 50px 50px;
     z-index: 0; /* 最背面 */
 }
@@ -656,10 +652,10 @@ height:auto;
     width: 250px;
     height: auto;
     margin-bottom: 50px; /* スライダーとの間隔 */
-    left: 10%
+    left: 10%;
 }
 
-.works-title_small{
+.works-title_small {
     display: none;
 }
 
@@ -669,7 +665,7 @@ height:auto;
     margin-top: 100px; /* WORKSタイトルからの距離 */
 }
 
-.works_image{
+.works_image {
     display: flex;
     justify-content: center;
     gap: 0;
@@ -679,40 +675,111 @@ height:auto;
 }
 
 .image img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 195px;
     display: block;
     object-fit: cover; /* 親要素全体を覆うように表示 */
     padding: 10px;
     background-color: #fff;
-    gap: 20px;
+}
+.works_image.slick-initialized .slick-slide {
+    width: 410px !important;
+    height: 410px !important;
+    background-color: #ffffff;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.works_image.slick-initialized .slick-slide a {
+    display: block;
+    text-align: center;
 }
 
-.slick-dots{
+.works_image .slick-dots {
     top: -110px;
     left: 40%;
-    max-width: 1000PX;
+    max-width: 1000px;
 }
 
-.slick-dots li{
+.works_image .slick-dots li {
     margin: 0;
 }
 
-.slick-next {
+/* 矢印 */
+.works_image .slick-next {
     margin: 150px 83% 0px 17%;
     max-width: 1440px;
-    color: #000;
+    background-color: #000;
     width: 50px;
     height: 50px;
 }
-.slick-prev {
-    margin: 150px 85% 0px 15%;
-    max-width: 1440px;
-    color: #000;
-
+.works_image .slick-next:before {
+    content: "";
+    display: block;
+    width: 18px !important;
+    height: 5px !important;
+    background-color: #c3c3c3;
+    border-radius: 5px;
+    right: 13px;
+    position: absolute;
+    top: 17px;
+    transform: rotate(45deg);
+    opacity: 1;
 }
-
-
+.works_image .slick-next:after {
+    content: "";
+    display: block;
+    width: 18px !important;
+    height: 5px !important;
+    background-color: #c3c3c3;
+    border-radius: 5px;
+    right: 13px;
+    position: absolute;
+    top: 27px;
+    transform: rotate(-45deg);
+    opacity: 1;
+}
+.works_image .slick-prev {
+    margin: 150px 85% 0px 9%;
+    max-width: 1440px;
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+}
+.works_image .slick-prev:before {
+    content: "";
+    display: block;
+    width: 18px !important;
+    height: 5px !important;
+    background-color: #c3c3c3;
+    border-radius: 5px;
+    left: 13px;
+    position: absolute;
+    top: 17px;
+    transform: rotate(-45deg);
+    opacity: 1;
+}
+.works_image .slick-prev:after {
+    content: "";
+    display: block;
+    width: 18px !important;
+    height: 5px !important;
+    background-color: #c3c3c3;
+    border-radius: 5px;
+    left: 13px;
+    position: absolute;
+    top: 27px;
+    transform: rotate(45deg);
+    opacity: 1;
+}
+.works_image .slick-prev:hover,
+.works_image .slick-prev:focus,
+.works_image .slick-next:hover,
+.works_image .slick-next:focus {
+    background-color: #000;
+}
 /* VIEW ALL ボタン */
 .view-all-link {
     display: block;
@@ -947,14 +1014,21 @@ height:auto;
     max-width: 400px;
 }
 
-/* VIEW MORE ボタン */
-.about-viewmore-link {
+/* VIEW ALL ボタン */
+.view-all-link {
     display: block;
-    width: 273px;
+    max-width: 1440px;
+    width: 200px;
     height: auto;
+    left: 60%;
+    top: 70%;
+    text-align: center;
+    z-index: 1;
+    position: absolute; /* 背景の上に配置するため */
 }
-.about-viewmore-link img {
-    width: 100%;
+
+.view-all-link img {
+    width: 170%;
     height: auto;
     display: block;
 }
