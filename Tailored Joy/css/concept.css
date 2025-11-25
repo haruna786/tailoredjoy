@@ -196,3 +196,5 @@ body {
     bottom: 5px;
     right: -15px;
 }
+@media screen and (max-width: 768px) {
+}

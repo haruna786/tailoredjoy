@@ -39,6 +39,7 @@
     padding-top: 70px;
     padding-bottom: 70px;
     font-size: 25px;
+    line-height: 1.5;
 }
 
 form {
@@ -96,3 +97,36 @@ button:hover {
     border: 1px solid #000;
 }
 
+@media screen and (max-width: 768px) {
+.explanation {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 18px;
+}
+
+label {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-top: 15px;
+}
+
+.required{
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 3px;
+}
+
+input, textarea {
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    width: 250px;
+    margin: 50px auto;
+    border-radius: 30px;
+    font-size: 14px;
+
+}
+
+}
