@@ -15,6 +15,7 @@
     <link href="./dist/css/lightbox.min.css" rel="stylesheet">
     <!-- デザインcss読み込み -->
     <link rel="stylesheet" href="./css/style.css" />
+    <limk role="stylesheet" href="./css/header.css" />
 </head>
 
 
@@ -57,11 +58,12 @@
         </div>
         <nav class="header_nav-sp">
             <ul class="hamburger-sp_text">
-                <li><a href="#top"><img src="./images/top_text_pc.png" alt="top"></a></li>
-                <li><a href="#concept"><img src="./images/concept_text_pc.png" alt="concept"></a></li>
-                <li><a href="#works"><img src="./images/works_text_pc.png" alt="works"></a></li>
-                <li><a href="#about"><img src="./images/about_text_pc.png" alt="about"></a></li>
-                <li><a href="contact.html"><img src="./images/contact_button2.png" alt="contact"></a></li>
+                <li><a href="index.html"><img src="./images/top_text_pc.png" alt="top"></a></li>
+                <li><a href="concept.html"><img src="./images/concept_text_pc.png" alt="concept"></a></li>
+                <li><a href="works.html"><img src="./images/works_text_pc.png" alt="works"></a></li>
+                <li><a href="about.html"><img src="./images/about_text_pc.png" alt="about"></a></li>
+                <li class="contact-sp-header"><a href="contact.html"><img src="./images/contact_button2.png"
+                            alt="contact"></a></li>
             </ul>
             <ul class="hamburger-sp_illust">
                 <li><img src="./images/strawberry.PNG" alt="strawberry"></li>
@@ -113,7 +115,10 @@
                 <div class="dog-callout">wan
                     <span></span>
                 </div>
-                <img src="./images/dog2.PNG" alt="お座りをしている犬" class="sitdog">
+                <div class="dog-illust-images">
+                    <img src="./images/dog2.PNG" alt="お座りをしている犬" class="sitdog">
+                    <img src="./images/dog3.PNG" alt="立っている犬" class="standdog">
+                </div>
             </div>
         </div>
         <div class="dot-sidebar">
@@ -368,7 +373,10 @@
                 $(".hamburger-sp").toggleClass("open-sp");
                 $(".header_nav-sp").fadeToggle();
             })
-        })
+
+
+        });
+
 
         // slick
 

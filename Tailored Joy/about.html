@@ -43,12 +43,19 @@
                 <span></span>
             </div>
             <nav class="header_nav-sp">
-                <ul>
+                <ul class="hamburger-sp_text">
                     <li><a href="index.html"><img src="./images/top_text_pc.png" alt="top"></a></li>
                     <li><a href="concept.html"><img src="./images/concept_text_pc.png" alt="concept"></a></li>
                     <li><a href="works.html"><img src="./images/works_text_pc.png" alt="works"></a></li>
                     <li><a href="about.html"><img src="./images/about_text_pc.png" alt="about"></a></li>
-                    <li><a href="contact.html"><img src="./images/contact_button2.png" alt="contact"></a></li>
+                    <li class="contact-sp-header"><a href="contact.html"><img src="./images/contact_button2.png"
+                                alt="contact"></a></li>
+                </ul>
+                <ul class="hamburger-sp_illust">
+                    <li><img src="./images/strawberry.PNG" alt="strawberry"></li>
+                    <li><img src="./images/dog1.PNG" alt="dog"></li>
+                    <li><img src="./images/flowers_illust.PNG" alt="flower"></li>
+                    <li><img src="./images/ribbon.PNG" alt="ribbon"></li>
                 </ul>
             </nav>
         </header>
@@ -89,36 +96,72 @@
                 <div class="favorite-section">
                     <h3 class="section-title-small">
                         <img src="./images/about_myfavorite.png" alt="myfavorite" class="profile">
-                        <p>すきなのこと・もの</p>
+                        <p>すきなこと・もの</p>
                     </h3>
 
                     <div class="favorite-icons">
                         <div class="icon-item">
-                            <div class="icon-circle">
+                            <button class="icon-circle">
                                 <img src="./images/dog2.PNG" alt="犬のアイコン">
+                                <span class="plus"></span>
+                            </button>
+                            <div class="popup">
+                                <div class="content">
+                                    <p class="popup-title">すきなこと・もの</p>
+                                    <p class="popup-topic">DOG</p>
+                                    <p class="popup-description">実家で柴犬を飼っています。小型犬も大型犬も大好きです！特に柴犬の尻尾が特に好きです！</p>
+                                    <img src="./images/dog2.PNG" alt="犬のアイコン" class="popup-image">
+                                    <button class="close"> <span class="pop-close"></span></button>
+                                </div>
                             </div>
-                            <span class="plus"></span>
                         </div>
 
                         <div class="icon-item">
-                            <div class="icon-circle">
+                            <button class="icon-circle">
                                 <img src="./images/Airplane.PNG" alt="飛行機のアイコン">
+                                <span class="plus"></span>
+                            </button>
+                            <div class="popup">
+                                <div class="content">
+                                    <p class="popup-title">すきなこと・もの</p>
+                                    <p class="popup-topic">TRIP</p>
+                                    <p class="popup-description">長期休みは国内外問わず、旅行に行きます！３連休などは日帰りで山梨、静岡にも行ったりします！</p>
+                                    <img src="./images/Airplane.PNG" alt="飛行機のアイコン" class="popup-image">
+                                    <button class="close"> <span class="pop-close"></span></button>
+                                </div>
                             </div>
-                            <span class="plus"></span>
-
                         </div>
                         <div class="icon-item">
-                            <div class="icon-circle">
+                            <button class="icon-circle">
                                 <img src="./images/movie.PNG" alt="ポップコーンのアイコン">
+                                <span class="plus"></span>
+                            </button>
+                            <div class="popup">
+                                <div class="content">
+                                    <p class="popup-title">すきなこと・もの</p>
+                                    <p class="popup-topic">MOVIE</p>
+                                    <p class="popup-description">移動時間は音楽を聞くのではなく基本は映画かアニメを視聴して時間を潰してます！</p>
+                                    <img src="./images/movie.PNG" alt="ポップコーンのアイコン" class="popup-image">
+                                    <button class="close"> <span class="pop-close"></span></button>
+                                </div>
                             </div>
-                            <span class="plus"></span>
                         </div>
 
                         <div class="icon-item">
-                            <div class="icon-circle">
+                            <button class="icon-circle">
                                 <img src="./images/chiken.png" alt="鶏のアイコン">
+                                <span class="plus"></span>
+                            </button>
+                            <div class="popup">
+                                <div class="content">
+                                    <p class="popup-title">すきなこと・もの</p>
+                                    <p class="popup-topic">EGG</p>
+                                    <p class="popup-description">卵焼き、卵かけご飯、オムライス...卵料理が好きです！おつまみにはだし巻き卵は必須で頼みます...！</p>
+                                    <img src="./images/chiken.png" alt="鶏のアイコン" class="popup-image">
+                                    <button class="close"> <span class="pop-close"></span></button>
+                                </div>
                             </div>
-                            <span class="plus"></span>
+
                         </div>
                     </div>
                 </div>
@@ -139,7 +182,7 @@
                             </ul>
                         </div>
                         <div class="skill-category">
-                            <img src="./images/about_coding.png" alt="coding" class="skils-list-title">
+                            <img src="./images/about_coding.png" alt="coding" class="skils-list-title-coding">
                             <ul>
                                 <li>HTML / CSS</li>
                                 <li>Javascript</li>
@@ -231,6 +274,25 @@
                 $(".header_nav-sp").fadeToggle();
             });
         });
+
+        $(".icon-circle").on("click", function () {
+            var targetPopup = $(this).closest(".icon-item").find(".popup");
+            targetPopup.fadeIn().addClass("show");
+        });
+
+        $(".close").on("click", function (event) {
+            event.stopPropagation();
+            $(this).closest(".popup").fadeOut().removeClass("show");
+        });
+
+        $(".popup").on("click", function (event) {
+            if ($(event.target).hasClass('popup')) {
+                $(this).fadeOut().removeClass("show");
+            }
+        });
+
+
+
     </script>
 
 
