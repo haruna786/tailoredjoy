@@ -1,141 +1,25 @@
 @charset "utf-8";
-/* ヘッダー部分 */
-.header_inner{
+/* ！！！！うまくできていないところ！！！！ */
+.header_nav-sp .hamburger-sp_illust{
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding-right: 7.6%;
-    padding-left: 2.9%; */
-    position: absolute;
-    width: 100%;
-    z-index: 9999;/* 最大値 */
-}
-
-.header_nav ul {
-    display: flex;
-    gap : 75px;
-}
-
-.header_nav a {
-    color: #000;
-    font-size : 18px;
-}
-
-.logo{
-    width : 230px;
-    height: auto;
-    padding-top: 10px;
-    padding-left: 50px;
-    z-index: 9999;
-}
-
-.hamburger,
-.header_nav-sp{
-    display: none;
-}
-
-/* slick */
-.slick-dots {
-    bottom: 0px;
-}
-.slick-dots li.slick-active button:before {
-    color: #fff;
-}
-.slick-dots li button:before {
-    color: #fff;
-}
-
-/* SP Ver */
-@media screen and (max-width: 1100px) {
-.header_nav{
-        display: none;
-}
-.hamburger{
-    display: block;
-    width: 100px;
-    height:70px;
-    background-color: #000;
-    border-radius: 25px;
-    position: fixed;
-    top: 30px;
-    right: 10px;
-    z-index: 9999;/* 最大値 */
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 50px;
-    height: 5px;
-    background-color: #fff;
-    position: absolute;
-    top: 32px;
-    left: 25px;
-    transition: 0.3s;
-}
-
- /* 擬似要素 */
-.hamburger span::before{
-     content: ""; /* 要素として認識させるコード */
-    width: 50px;
-    height: 5px;
-    background-color: #fff;
-    position: absolute;
-    top: -14px;
-    transition: 0.3s;
-}
-.hamburger span::after{
-    content: ""; /* 要素として認識させるコード */
-    width: 50px;
-    height: 5px;
-    background-color: #fff;
-    position: absolute;
-    bottom: -14px;
-    transition: 0.3s;
-}
-
-.open span{
-    background-color: transparent;
-}
-
-.open span::before{
-    transform: rotate(45deg);
-    top:0; /*元々同じ位置にあったものをさっきずらしたのを戻した */
-}
-
-.open span::after{
-    transform: rotate(-45deg);
-    bottom:0;
-}
-.header_nav-sp{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: #c3c3c3;
+    height: 100%;
+    justify-content: center;
+    gap: 20px;
+    width: auto;
+    height: 70px;
     z-index: 9998;
 }
 
-.header_nav-sp ul{
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-}
-
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #333;
+    font-family: "Zen Kaku Gothic New","Noto Sans JP", sans-serif;
+    color: #000;
     line-height: 1.7;
     margin: 0;
     padding: 0;
     background-color: #fff;
     overflow-x: hidden;
 }
-
 /* メインコンテンツの全体設定 */
 .content-wrapper {
     max-width: 1200px;
@@ -149,16 +33,15 @@ body {
     padding-top: 40px;
 }
 
-.concept-h1-pc{
+.concept-h1-pc {
     width: 40%;
     padding-bottom: 50px;
 }
 
-.concept-h1-sp{
+.concept-h1-sp {
     display: none;
 }
-
-.heading_h2{
+.heading_h2 {
     margin: 50px;
 }
 
@@ -168,7 +51,6 @@ body {
     display: block;
     margin: 0 auto;
 }
-
 .concept-catchphrase_PC {
     display: block;
     font-size: 32px;
@@ -180,7 +62,6 @@ body {
 .concept-catchphrase_SP {
     display: none;
 }
-
 .concept-text {
     width: 100%;
     max-width: 530px;
@@ -201,25 +82,25 @@ body {
 }
 
 .process-list {
-    position: relative;
+    /* position: relative; */
     max-width: 900px;
     margin: 0 auto;
 }
 
 .process-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
+    /* ？？？？分ける必要ある？？ */
+    position: relative;
 }
 
+/* プロセス部分 */
 .step-label-container {
-    flex-shrink: 0;
-    width: 200px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
+    border-bottom: #000 solid 2px;
+    margin-bottom: 20px;
+    max-width: 740px;
 }
 
 .step-number {
@@ -233,23 +114,15 @@ body {
     align-items: center;
     font-size: 18px;
     font-weight: 700;
-    position: absolute;
-    right: -20px;
-    top: 0;
-    z-index: 1;
 }
 
 .step-label {
     font-weight: 700;
-    margin-top: 10px;
-    padding-right: 50px; /* 番号との間隔 */
-    text-align: right;
+    padding-left: 10px; /* 番号との間隔 */
 }
 
 .step-content {
-    padding-left: 80px;
-    position: relative;
-    max-width: 60%;
+    display: flex;
 }
 
 /* 画像とテキスト */
@@ -266,4 +139,72 @@ body {
 
 .step-content p {
     margin: 0 auto;
+    width: calc(100% - 430px);
+  /* 親要素の全幅 (100%) から430ピクセルを差し引いた値 */
+    line-height: 2.2;
+}
+
+/* 右側の矢印部分 */
+.timeline-text {
+    position: absolute;
+    writing-mode: vertical-lr;
+    right: 0;
+    bottom: 20%;
+}
+.timeline-arrow {
+    position: absolute;
+    width: 2px;
+    height: 90%;
+    background-color: #000;
+    right: 22px;
+    top: 50px;
+}
+.timeline-arrow::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(45deg);
+    bottom: 5px;
+    left: -15px;
+}
+.timeline-arrow::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(-45deg);
+    bottom: 5px;
+    right: -15px;
+}
+
+.timeline-arrow-long {
+    position: absolute;
+    width: 2px;
+    height: 390%;
+    background-color: #000;
+    right: 22px;
+    top: 50px;
+}
+.timeline-arrow-long::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(45deg);
+    bottom: 5px;
+    left: -15px;
+}
+.timeline-arrow-long::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(-45deg);
+    bottom: 5px;
+    right: -15px;
 }

@@ -10,6 +10,9 @@
     <!-- デザインcss読み込み -->
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/works.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+
+
     <!-- slick読み込み -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
@@ -29,11 +32,11 @@
             </h1>
             <nav class="header_nav">
                 <ul>
-                    <li><a href="#top">TOP</a></li>
-                    <li><a href="#concept">CONCEPT</a></li>
-                    <li><a href="#works"></a>WORKS</li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#contact">CONCEPT</a></li>
+                    <li><a href="index.html">TOP</a></li>
+                    <li><a href="concept.html">CONCEPT</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,11 +45,11 @@
         </div>
         <nav class="header_nav-sp">
             <ul>
-                <li><a href="#top"><img src="./images/top_text_pc.png" alt="top"></a></li>
-                <li><a href="#concept"><img src="./images/concept_text_pc.png" alt="concept"></a></li>
-                <li><a href="#works"><img src="./images/works_text_pc.png" alt="works"></a></li>
-                <li><a href="#about"><img src="./images/about_text_pc.png" alt="about"></a></li>
-                <li><a href="#contact"><img src="./images/contact_button.png" alt="contact"></a></li>
+                <li><a href="index.html"><img src="./images/top_text_pc.png" alt="top"></a></li>
+                <li><a href="concept.html"><img src="./images/concept_text_pc.png" alt="concept"></a></li>
+                <li><a href="works.html"><img src="./images/works_text_pc.png" alt="works"></a></li>
+                <li><a href="about.html"><img src="./images/about_text_pc.png" alt="about"></a></li>
+                <li><a href="contact.html"><img src="./images/contact_button2.png" alt="contact"></a></li>
             </ul>
         </nav>
     </header>
@@ -198,33 +201,39 @@
                 <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY">
             </div>
             <div class="footer_contact_sp">
-                <a href="#contact">
-                    <img src="./images/contact_button.png" alt="CONTACT">
+                <a href="contact.html">
+                    <img src="./images/contact_button2.png" alt="CONTACT">
                 </a>
             </div>
             <nav class="footer_nav_sp">
                 <ul>
-                    <li><a href="#top">TOP</a></li>
-                    <li><a href="#concept">CONCEPT</a></li>
-                    <li><a href="#works">WORKS</a></li>
-                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="index.html">TOP</a></li>
+                    <li><a href="concept.html">CONCEPT</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
                 </ul>
             </nav>
             <p class="copy_sp">&copy; haruna_ikeda.portfolio</p>
         </div>
 
+        <!-- PCのフッター -->
         <div class="footer_inner">
             <div class="footer_left_content">
                 <div class="footer_address">
                     <ul>
-                        <li><a href="#top">TOP</a></li>
-                        <li><a href="#concept">CONCEPT</a></li>
-                        <li><a href="#works">WORKS</a></li>
-                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="index.html">TOP</a></li>
+                        <li><a href="concept.html">CONCEPT</a></li>
+                        <li><a href="works.html">WORKS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
                     </ul>
                 </div>
-                <p class="copy">&copy; haruna_ikeda.portfolio</p>
+                <div class="footer_contact">
+                    <a href="contact.html">
+                        <img src="./images/contact_button2.png" alt="CONTACT">
+                    </a>
+                </div>
             </div>
+
             <div class="pagetop_footer">
                 <a href="#header">
                     <img src="./images/top_scroll.png" alt="PAGE TOP" class="pagetop-frame" />
@@ -232,6 +241,7 @@
                 </a>
             </div>
         </div>
+        <p class="copy">&copy; haruna_ikeda.portfolio</p>
 
         <div class="footer_logo">
             <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY">
@@ -245,23 +255,14 @@
     <!-- slick読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <!-- Tailwindの設定をインラインで読み込み (カスタムカラー定義) -->
+
     <script>
-        // ハンバーガーメニュー
         $(function () {
             $(".hamburger").click(function () {
                 $(".hamburger").toggleClass("open");
-                // $(".header_nav").fadeToggle();
-            })
-        })
-
-        $(function () {
-            $(".hamburger-sp").click(function () {
-                $(".hamburger-sp").toggleClass("open-sp");
                 $(".header_nav-sp").fadeToggle();
-            })
-        })
-
+            });
+        });
     </script>
 
 

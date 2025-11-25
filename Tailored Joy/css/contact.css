@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 50px 20px; /* ヘッダーと被らないよう上部に十分な余白 */
+    position: relative;
+    z-index: 2;
+}
+
+.contact-section {
+    padding-top: 40px;
+}
+
+.heading_h1{
+    display: flex;
+    position: relative;
+}
+.contact-h1-pc {
+    width: 40%;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.contact-h1-sp {
+    display: none;
+}
+
+.contact-title_illust {
+    position: absolute;
+    width: 12%;
+    height: auto;
+    right: 48%;
+    bottom: 50px;
+}
+
+
+.explanation{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 25px;
+}
+
+form {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+label {
+    display: block;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #000;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;/* 縦方向のみに右下で自由にサイズ変更が可能 */
+    height: 120px;
+}
+
+.required{
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #808080;
+    color: #808080;
+    margin-left: 10px;
+    padding: 4px;
+}
+
+button {
+    display: block;
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 250px;
+    margin: 50px auto;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ホバー時のボタンスタイル */
+button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+

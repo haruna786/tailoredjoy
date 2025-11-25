@@ -2,26 +2,24 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailored Joy</title>
     <!-- リセットcss読み込み -->
     <link rel="stylesheet" href="./css/reset.css" />
-    <!-- デザインcss読み込み -->
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/works.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-
     <!-- slick読み込み -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <!-- lightbox読み込み -->
-    <link href="./dist/css/lightbox.min.css" rel="stylesheet">
+    <link href="./dist/css/lightbox.min.css" rel="stylesheet" />
+    <!-- デザインcss読み込み -->
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/header.css" />
 </head>
 
-<body class="custom-bg min-h-screen">
-
+<body>
     <!-- ヘッダー部分 -->
     <header id="header">
         <div class="header_inner">
@@ -53,71 +51,40 @@
         </nav>
     </header>
 
-    <!-- works 青い部分 -->
-    <main class="works-all">
-        <div class="works-inner">
-            <!-- 左側 -->
-            <div class="works-left">
-                <h1 class="works-title">
-                    <img src="./images/works_title-big.png" alt="works">
-                </h1>
-                <div class="button-all">
-                    <button class="category-button"><img src="./images/works-btn-all.png" alt="all"><a
-                            href="#all"></a></button>
-                    <button class="category-button"><img src="./images/works-btn-website.png" alt="website"><a
-                            href="#website"></a></button>
-                    <button class="category-button"><img src="./images/works-btn-lp.png" alt="lp"><a
-                            href="#lp"></a></button>
-                    <button class="category-button"><img src="./images/works-btn-banner.png" alt="banner"><a
-                            href="#banner"></a></button>
-                    <button class="category-button"><img src="./images/works-btn-illust.png" alt="illust"><a
-                            href="#illust"></a></button>
+    <main class="contact-wrapper">
+        <section class="contact-section" id="contact">
+            <h1 class="heading_h1">
+                <img src="./images/contact_bigtitle.png" alt="contact" class="contact-h1-pc" />
+                <img src="./images/contact_text_pc.png" alt="contact" class="contact-h1-sp" />
+                <img src="./images/flowers_illust.PNG" alt="flowers" class="contact-title_illust" />
+            </h1>
+
+            <p class="explanation">各種ご依頼やお問い合わせ、制作料金のご相談やご質問など、お気軽にこちらのフォームよりご送信ください。３日以内でお返事いたします。</p>
+
+            <form>
+                <div class="contact-area">
+                    <label>お名前<span class="required">必須</span></label>
+                    <input type="text" name="name" placeholder="例）山田花子" value="">
                 </div>
-            </div>
-
-            <!-- 右側-->
-            <div class="works-right_image">
-                <div class="image">
-                    <img src="./images/mockup_PC_kadai5.png" alt="作品画像">
-                    <div class="text-inner">
-                        <div class="top-line"></div>
-                        <div class="works-description">
-                            <div class="label">依頼内容</div>
-                            <div class="content">LPデザイン</div>
-                        </div>
-                        <div class="row-separator"></div>
-
-                        <div class="top-line"></div>
-                        <div class="works-description">
-                            <div class="label">担当範囲</div>
-                            <div class="content">デザイン（トレース）</div>
-                        </div>
-
-                        <div class="top-line"></div>
-                        <div class="works-description">
-                            <div class="label">制作期間</div>
-                            <div class="content">1週間</div>
-                        </div>
-
-                        <div class="top-line"></div>
-                        <div class="works-description">
-                            <div class="label">制作ツール</div>
-                            <div class="content">Illustrator・photoshop</div>
-                        </div>
-
-                        <div class="top-line"></div>
-                        <div class="works-description">
-                            <div class="label">制作ポイント</div>
-                        </div>
-                        <p class="point-text">ああああああああああああああああああああああああああああああああああああああああ</p>
-
-                    </div>
+                <div class="contact-area">
+                    <label>ふりがな<span class="required">必須</span></label>
+                    <input type="text" name="furigana" placeholder="例）やまだはなこ" value="">
                 </div>
-                <div class="image-full">
-                    <img src="./images/kadai5_ikeda01_PC.gif" alt="kadai5">
-                    <img src="./images/kadai5_ikeda01_SP.gif" alt="kadai5">
+                <div class="contact-area">
+                    <label>メールアドレス<span class="required">必須</span></label>
+                    <input type="text" name="email" placeholder="例）tailoredjoy@example.com" value="">
                 </div>
-            </div>
+                <div class="contact-area">
+                    <label>会社名</label>
+                    <input type="text" name="company" placeholder="例）tailoredjoy株式会社" value="">
+                </div>
+                <div class="contact-area">
+                    <label>お問い合わせ内容<span class="required">必須</span></label>
+                    <textarea name="content" rows="5" placeholder="お問い合わせ、お見積もり無料です。ご気軽にお問い合わせください。"></textarea>
+                </div>
+                <button type="submit">送信する</button>
+            </form>
+        </section>
     </main>
     <footer>
         <img src="./images/dotto_rectangle.png" alt="ドットの装飾" class="footer-dots">
@@ -172,14 +139,15 @@
         <div class="footer_logo">
             <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY">
         </div>
-    </footer>
 
+    </footer>
     <!-- JQuery読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- lightbox読み込み -->
     <script src="./dist/js/lightbox-plus-jquery.min.js"></script>
     <!-- slick読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
     <script>
         $(function () {
