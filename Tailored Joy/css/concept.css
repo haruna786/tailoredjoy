@@ -29,16 +29,21 @@ body {
 .concept-h1-sp {
     display: none;
 }
-.heading_h2 {
-    margin: 50px;
-}
 
-.heading_h2 .concept-h2 {
+.concept-h2-pc {
+    margin: 50px;
     width: 30%;
     height: auto;
     display: block;
     margin: 0 auto;
+    padding-bottom: 50px;
+    padding-top: 100px;
 }
+
+.concept-h2-sp{
+    display: none;
+}
+
 .concept-catchphrase_PC {
     display: block;
     font-size: 32px;
@@ -50,6 +55,8 @@ body {
 .concept-catchphrase_SP {
     display: none;
 }
+
+
 .concept-text {
     width: 100%;
     max-width: 530px;
@@ -60,7 +67,7 @@ body {
 }
 
 .creation-process {
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
 .process-title {
@@ -79,8 +86,53 @@ body {
     padding-bottom: 50px;
     /* ？？？？分ける必要ある？？ */
     position: relative;
+    background-color: #fff;
 }
 
+
+/* ドットの背景装飾 */
+.comcept-top-img{
+    position: absolute;
+    top: 225px;
+    width: 8%;
+    right: 0;
+}
+
+.comcept-dotto-backimg1{
+    opacity: 0.5;
+    position:absolute;
+    width: 8%;
+    left: 0;
+    top: 1150px;
+    transform: rotate(-45deg);
+}
+
+.comcept-dotto-backimg2{
+    opacity: 0.5;
+    position: absolute;
+    width: 18%;
+    right: -530px;
+    top: 1370px;
+    transform: rotate(-90deg);
+}
+
+.comcept-dotto-backimg3{
+    opacity: 0.5;
+    position: absolute;
+    width: 17%;
+    left: -530px;
+    top: 2190px;
+    transform: rotate(-90deg);
+}
+
+.comcept-dotto-backimg4{
+    opacity: 0.5;
+    position: absolute;
+    width: 12%;
+    right: -190px;
+    top: 3220px;
+    transform: rotate(35deg);
+}
 /* プロセス部分 */
 .step-label-container {
     display: flex;
@@ -146,6 +198,7 @@ body {
     background-color: #000;
     right: 22px;
     top: 50px;
+    z-index: 999;
 }
 .timeline-arrow::before {
     position: absolute;
@@ -175,6 +228,7 @@ body {
     background-color: #000;
     right: 22px;
     top: 50px;
+    z-index: 999;
 }
 .timeline-arrow-long::before {
     position: absolute;
@@ -197,4 +251,141 @@ body {
     right: -15px;
 }
 @media screen and (max-width: 768px) {
+
+.concept-h1-pc {
+    display: none;
 }
+
+.concept-h1-sp {
+    display: block;
+    width: 16%;
+    padding-bottom: 0px;
+    margin: 0 auto;
+}
+.concept-h2-pc {
+    display: none;
+}
+
+.concept-h2-sp{
+    width: 45%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 65px;
+    padding-top: 100px;
+}
+
+.concept-catchphrase_PC {
+    display: none;
+}
+
+.concept-catchphrase_SP {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.concept-head{
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.process-title {
+    padding-bottom: 70px;
+    display: table;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.comcept-dotto-backimg1 {
+    opacity: 0.5;
+    position: absolute;
+    width: 8%;
+    left: 0;
+    top: 580px;
+    transform: rotate(-45deg);
+}
+.step-content {
+    display: block;
+}
+
+.image-back {
+    width: 285px;
+    height: 285px;
+    background-color: #ffff;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+}
+.timeline-text {
+    position: absolute;
+    writing-mode: vertical-lr;
+    left: -6px;
+    bottom: 20%;
+}
+.timeline-arrow  {
+    position: absolute;
+    width: 2px;
+    height: 90%;
+    background-color: #a9c4c8;
+    left: 18px;
+    top: 40px;
+    z-index: 999;
+}
+
+.timeline-arrow::before,
+.timeline-arrow::after,
+.timeline-arrow-long::before,
+.timeline-arrow-long::after{
+    background-color:  #a9c4c8;
+}
+
+
+.timeline-arrow-long  {
+    position: absolute;
+    width: 2px;
+    height: 385%;
+    background-color: #a9c4c8;
+    left: 18px;
+    top: 40px;
+    z-index: 1;
+}
+
+.step-number{
+    position: relative;
+    z-index: 2;
+    background-color:#a9c4c8;
+}
+
+.comcept-dotto-backimg2,.comcept-dotto-backimg3 {
+    display: none;
+}
+.comcept-dotto-backimg3 {
+    opacity: 0.5;
+    position: absolute;
+    width: 17%;
+    right: -230px;
+    top: 1720px;
+    transform: rotate(-90deg);
+}
+.comcept-dotto-backimg4 {
+    opacity: 0.5;
+    position: absolute;
+    width: 8%;
+    left: 0;
+    top: 3325px;
+    transform: rotate(0deg);
+}
+
+
+}
+
+
+
+

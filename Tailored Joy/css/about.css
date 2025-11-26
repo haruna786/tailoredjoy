@@ -1,9 +1,9 @@
 @charset "utf-8";
 .dots{
-  background-color: #ffffff;
-  background-image: radial-gradient(circle, #CCC 50px, transparent 50px), radial-gradient(circle, #CCC 50px, transparent 50px);
-  background-position: 0 0, 200px 200px;
-  background-size: 400px 400px;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle, #CCC 50px, transparent 50px), radial-gradient(circle, #CCC 50px, transparent 50px);
+    background-position: 0 0, 200px 200px;
+    background-size: 400px 400px;
 }
 
 .container {
@@ -12,15 +12,17 @@
     margin: 0 auto;
 }
 
-.section-title-large{
+
+.big-about {
     text-align: left;
     padding-top: 150px;
     margin-bottom: 50px;
-}
-
-.section-title-large img {
     width: 250px;
     height: auto;
+}
+
+.small-about{
+    display: none;
 }
 
 .section-title-small{
@@ -36,6 +38,9 @@
     padding-bottom: 50px;
 }
 
+.section-title-small-sp{
+    display: none;
+}
 /* プロフィールセクション */
 .profile-section {
     margin-bottom: 80px;
@@ -114,7 +119,7 @@
 .icon-circle {
     width: 150px;
     height: 150px;
-    border: 1px solid #333;
+    border: 3px solid #333;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -135,9 +140,9 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    position: absolute;
-    left: 120px;
-    top: 115px;
+    position: relative;
+    left: 15px;
+    top: 51px;
 }
 
 .plus::before{
@@ -182,14 +187,14 @@
     margin: 20% auto;
 }
 
-.close{
+.close {
     background-color: #000;
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    left: 512px;
-    top: 570px;
-    position: absolute;
+    left: 122px;
+    top: 10px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,15 +246,19 @@
     text-align: center;
 }
 
-.skils-list-title {
-    width: 50%;
-    height: auto;
-    padding-bottom: 30px;
+.skils-list-title-design{
+    width: 75px;
+    padding-bottom: 20px;
 }
-.skils-list-title-coding{
-    width: 45%;
-    height: auto;
-    padding-bottom: 30px;
+
+.skils-list-title-coding {
+    width: 75px;
+    padding-bottom: 20px;
+}
+
+.skils-list-title-comnication{
+    width: 160px;
+    padding-bottom: 20px;
 }
 
 .skill-category ul {
@@ -258,6 +267,202 @@
 
 .skill-category li {
     font-size: 20px;
+    padding-bottom: 15px;
 }
+
+/* レコメンド */
+
 @media screen and (max-width: 768px) {
+
+.big-about {
+    display: none;
 }
+
+.small-about{
+    display: block;
+    padding-top: 150px;
+    width: 110px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.profile-image-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    top: 10px;
+    margin: 0 auto;
+}
+
+.section-title-small-sp{
+    display: block;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.section-title-small-sp .profile{
+    width: 15%;
+    padding-top: 60px;
+    padding-bottom: 5px;
+}
+
+
+.profile-content {
+    display: block;
+}
+
+.section-title-small{
+    display: none;
+}
+
+.name{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.name h3{
+    font-size: 30px;
+}
+
+.name p{
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.profile-right p {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.profile-sp{
+    width: 25%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+.favorite-icons{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 600px;
+    gap: 10px;
+    padding: 0px;
+}
+
+.icon-item {
+    width: 34%;
+    height: 100%;
+    aspect-ratio: 1 / 1;/* 正方形を維持したまま縮小 */
+}
+
+.icon-circle {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #333;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.plus{
+    display: block;
+    background-color: #000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    left: 10px;
+    top: 40px;
+}
+.plus::before {
+    content: "";
+    width: 13px;
+    height: 2px;
+    bottom: 10px;
+    left: 4px;
+    background-color: #fff;
+    position: absolute;
+}
+.plus::after {
+    content: "";
+    width: 13px;
+    height: 2px;
+    bottom: 9px;
+    left: 4px;
+    background-color: #fff;
+    position: absolute;
+    transform: rotate(-90deg);
+}
+.close {
+    background-color: #000;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    left: 122px;
+    top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-section .profile-sp {
+    width: 17%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+.skills-list {
+    display: block;
+    padding-bottom: 20px;
+}
+
+.skill-category {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.skils-list-title-design{
+    width: 15%;
+}
+
+.skils-list-title-coding {
+    width: 15%;
+}
+
+.skils-list-title-comnication{
+    width: 30%;
+}
+
+.skill-category ul {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 30%;
+}
+
+.communication-ul{
+    padding-left: 10%;
+}
+
+.skill-category .skill-category li {
+    font-size: 16px;
+}
+
+.dot-skill {
+    display: none;
+}
+
+
+}
+
+
+

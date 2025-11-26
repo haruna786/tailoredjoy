@@ -67,20 +67,61 @@
             <!-- 左側 -->
             <div class="works-left">
                 <h1 class="works-title">
-                    <img src="./images/works_title-big.png" alt="works">
+                    <img src="./images/works_title-big.png" alt="works" class="works-title-pc">
+                    <img src="./images/works_text_pc.png" alt="works" class="works-title-sp">
                 </h1>
-                <div class="button-all">
-                    <button class="category-button"><img src="./images/works-btn-all.png" alt="all"><a
-                            href="#all"></a></button>
-                    <button class="category-button"><img src="./images/works-btn-website.png" alt="website"><a
-                            href="#website"></a></button>
-                    <button class="category-button"><img src="./images/works-btn-lp.png" alt="lp"><a
-                            href="#lp"></a></button>
-                    <button class="category-button"><img src="./images/works-btn-banner.png" alt="banner"><a
-                            href="#banner"></a></button>
-                    <button class="category-button"><img src="./images/works-btn-illust.png" alt="illust"><a
-                            href="#illust"></a></button>
+                <ul class="button-all">
+                    <li><a href="#all">
+                            <button class="category-button">
+                                <img src="./images/works-btn-all.png" alt="all">
+                            </button>
+                        </a></li>
+
+                    <li><a href="#website">
+                            <button class="category-button">
+                                <img src="./images/works-btn-website.png" alt="website">
+                            </button>
+                        </a></li>
+
+                    <li><a href="#lp">
+                            <button class="category-button">
+                                <img src="./images/works-btn-lp.png" alt="lp">
+                            </button>
+                        </a></li>
+
+                    <li><a href="#banner">
+                            <button class="category-button">
+                                <img src="./images/works-btn-banner.png" alt="banner">
+                            </button>
+                        </a></li>
+
+                    <li><a href="#illust">
+                            <button class="category-button">
+                                <img src="./images/works-btn-illust.png" alt="illust">
+                            </button>
+                        </a></li>
+
+                </ul>
+            </div>
+
+            <!-- SP版　横から出てくる -->
+            <div class="sp-drawer">
+                <div class="works-drawer-trigger">
+                    <p>作品一覧</p>
+                    <div class="drawer-close-icon">
+                        <span></span>
+                    </div>
                 </div>
+
+                <nav class="works-drawer-menu">
+                    <ul class="works-menu-list">
+                        <li><a href="#all">ALL</a></li>
+                        <li><a href="#website">WEB SITE</a></li>
+                        <li><a href="#lp">LP</a></li>
+                        <li><a href="#banner">BANNER</a></li>
+                        <li><a href="#illust">ILLUST</a></li>
+                    </ul>
+                </nav>
             </div>
 
             <!-- 右側-->
@@ -101,7 +142,7 @@
                             <div class="space-back">
 
                             </div>
-                            <p class="description">更新中</p>
+                            <p class="description">comming soon...</p>
                         </div>
                     </div>
                 </section>
@@ -120,23 +161,22 @@
                         <!-- 作品2 -->
                         <div class="space">
                             <div class="space-back">
-                                <img src="./images/kadai5_mock_PC.png" alt="作品5" class="work-image">
+                                <img src="./images/kadai6_capcha.png" alt="作品5" class="work-image">
                             </div>
                             <p class="description">コーヒーショップ</p>
                         </div>
                         <!-- 作品3 -->
                         <div class="space">
                             <div class="space-back">
-                                <img src="./images/kadai5_mock_PC.png" alt="作品5" class="work-image">
+                                <img src="./images/kadai4_1440px.png" alt="作品5" class="work-image">
                             </div>
                             <p class="description">コワーキングスペース</p>
                         </div>
                         <!-- 作品4（空） -->
                         <div class="space">
                             <div class="space-back">
-                                <img src="./images/kadai5_mock_PC.png" alt="作品5" class="work-image">
                             </div>
-                            <p class="description">更新中</p>
+                            <p class="description">comming soon...</p>
                         </div>
                     </div>
                 </section>
@@ -169,7 +209,7 @@
                         <!-- 作品4（空） -->
                         <div class="space">
                             <div class="space-back"></div>
-                            <p class="description">更新中</p>
+                            <p class="description">comming soon...</p>
                         </div>
                     </div>
                 </section>
@@ -269,6 +309,25 @@
                 $(".hamburger").toggleClass("open");
                 $(".header_nav-sp").fadeToggle();
             });
+
+
+            // 作品一覧ドロワーメニューの動作
+            var $drawerMenu = $('.works-drawer-menu');
+            var $drawerTrigger = $('.works-drawer-trigger');
+
+            // トリガーボタンをクリックした時の処理 (開閉)
+            $drawerTrigger.on('click', function () {
+                // is-open クラスを付け外しすることでスライドイン/アウトを制御
+                $drawerMenu.toggleClass('is-open');
+            });
+
+            // メニュー内のリンクをクリックした時もメニューを閉じる (UX向上のため)
+            $('.works-menu-list a').on('click', function () {
+                $drawerMenu.removeClass('is-open');
+            });
+
+
+
         });
     </script>
 

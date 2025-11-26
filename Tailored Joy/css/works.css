@@ -23,13 +23,20 @@
     padding-right: 20px;
 }
 
-/* WORKSタイトル画像 */
-.works-title {
-    margin-bottom: 30px;
+/* SP版　横から出てくる */
+.sp-drawer{
+    display: none;
 }
-.works-title img {
+
+
+/* WORKSタイトル画像 */
+.works-title-pc {
+    margin-bottom: 30px;
     max-width: 100%;
     height: auto;
+}
+.works-title-sp {
+    display: none;
 }
 
 /* カテゴリボタン */
@@ -61,7 +68,7 @@
 }
 
 section {
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 /* セクションタイトル */
@@ -76,12 +83,13 @@ section {
 #website, #lp, #banner, #illust {
     display: grid;
     gap: 20px;
+    max-width: 700px;
 }
 .work-image {
     /* position: absolute; */
     top: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
     display: block;
@@ -90,22 +98,25 @@ section {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    box-sizing: border-box;
-    width: calc((100% - 20px) / 2);
+    width: 40%;
 }
 
 .space-flex{
     display: flex;
     gap: 5%;
+    flex-wrap: wrap;
+    max-width: 700px;
 }
 
 .space-back {
-    width: 100%;
-    border: 1px solid #cbd5e0;
+    border: 1px solid #3c3c3c;
+    width: 250px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    aspect-ratio: 1 / 1;
 }
 
 /* 作品の説明 */
@@ -151,4 +162,120 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+/* 横から出てくる部分 */
+.sp-drawer{
+    display: block;
+}
+
+.works-drawer-trigger {
+    position: fixed; /* 画面に固定 */
+    top: 25%;
+    right: 0;
+    width: 55px;
+    height: 215px;
+    padding: 10px 5px;
+    background-color: #000;
+    cursor: pointer;
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:first baseline;
+    border-radius: 22px 0 0 22px;
+}
+
+.works-drawer-trigger p {
+    writing-mode: vertical-rl; /* 縦書き */
+    letter-spacing: 1.6px;
+    color: #fff;
+    position: absolute;
+    z-index: 999;
+}
+
+.drawer-close-icon span {
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+    padding-top: 95px;
+    color: #fff;
+    width: 10px;
+    height: 1px;
+}
+
+.works-drawer-menu {
+    position: fixed;
+    top: 200px;
+    right: 0;
+    width: 30%;
+    height: 185px;
+    background-color: #FFF;
+    border: 3px #000 solid;
+    color: #000;
+    z-index: 997;
+    padding: 10px 10px 20px;
+    transition: transform 0.4s ease-out;
+    border-radius: 22px 0 0 22px;
+}
+
+/* 💡 表示状態: translateX(0)で元の位置に戻し、画面内に表示する */
+.works-drawer-menu.is-open {
+    transform: translateX(0);
+}
+
+.works-menu-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.works-menu-list li:first-child {
+    border-top: 0px ;
+}
+
+.works-menu-list a {
+    color: #000;
+    font-size: 16px;
+    display: block;
+}
+
+/* ----------------------------------------- */
+
+.button-all{
+    display: none;
+}
+
+.works-title-pc {
+    display: none;
+}
+.works-title-sp {
+    display: block;
+    width: 65%;
+    height: auto;
+}
+
+.works-inner {
+    display: grid;
+}
+.works-right {
+    width: 100%;
+}
+
+.works-left{
+    margin: 0 auto;
+    padding-right: 0;
+}
+
+.website-title, .lp-title, .banner-title, .illust-title {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    padding-bottom: 3%;
+}
+
+.space-back {
+    border: 1px solid #3c3c3c;
+    width: 175px;
+    height: 110px;
+
+}
+
 }
