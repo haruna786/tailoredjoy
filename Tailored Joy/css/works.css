@@ -62,7 +62,7 @@
 /* 右側スクロールエリア */
 .works-right {
     width: 75%;
-    padding-left: 50px;
+    padding-left: 110px;
     padding-top: 10%;
     overflow-y: auto;
 }
@@ -86,10 +86,8 @@ section {
     max-width: 700px;
 }
 .work-image {
-    /* position: absolute; */
     top: 0;
     left: 0;
-    width: auto;
     height: 100%;
     object-fit: cover;
     display: block;
@@ -103,62 +101,42 @@ section {
 
 .space-flex{
     display: flex;
-    gap: 5%;
+    gap: 15%;
     flex-wrap: wrap;
     max-width: 700px;
 }
 
 .space-back {
     border: 1px solid #3c3c3c;
-    width: 250px;
-    height: 150px;
+    width: 300px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     aspect-ratio: 1 / 1;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle, #56210087 23px, transparent 23px);
+    background-position: -40px -27px;
+    background-size: 125px 83px;
 }
+.space-back2 {
+    border: 1px solid #3c3c3c;
+    width: 300px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background-color: #fff;
+
+}
+
 
 /* 作品の説明 */
 .description {
     font-size:14px;
-}
-
-/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
-/* worksの詳細ページ */
-.works-right_image {
-    width: 75%;
-    padding-left: 50px;
-    padding-top: 3%;
-    overflow-y: auto;
-}
-
-.text-inner{
-    padding-top: 50px;
-}
-
-.works-description{
-    display: flex;
-    padding-bottom: 30px;
-}
-
-.label{
-    padding-left: 40px;
-    padding-right: 100px;
-}
-.point-text{
-    padding-left: 40px;
-    padding-bottom: 40px;
-}
-
-.image-full{
-    display: flex;
-    gap: 10px;
-}
-
-.image-full img{
-    width: 50%;
-    height: 50%;
 }
 
 @media screen and (max-width: 768px) {
@@ -233,7 +211,7 @@ section {
     display: block;
 }
 
-/* ----------------------------------------- */
+/* ---左側のボタン部分------------------------ */
 
 .button-all{
     display: none;
@@ -253,6 +231,7 @@ section {
 }
 .works-right {
     width: 100%;
+    padding-left: 0;
 }
 
 .works-left{
@@ -271,7 +250,78 @@ section {
     border: 1px solid #3c3c3c;
     width: 175px;
     height: 110px;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle, #56210087 8.5px, transparent 8.5px);
+    background-position: -15px -8px;
+    background-size: 51px 40px;
+}
 
+.space-back2 {
+    border: 1px solid #3c3c3c;
+    width: 175px;
+    height: 110px;
+}
+
+/* 右側 */
+.space-flex{
+    display: flex;
+    gap: 15%;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+
+}
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+/* worksの詳細ページ */
+
+.works-right_image {
+    width: 75%;
+    padding-left: 50px;
+    padding-top: 3%;
+    overflow-y: auto;
+}
+
+.text-inner{
+    padding-top: 50px;
+}
+
+.works-description{
+    display: flex;
+    padding: 20px 0;
+    border-bottom: solid 1px #3c3c3c;
+}
+
+.label{
+    padding-left: 40px;
+    padding-right: 100px;
+}
+.point-text{
+    padding: 20px 30px 40px 40px;
+}
+
+.image-full{
+    display: flex;
+    gap: 10px;
+}
+
+.image-full img{
+    width: 50%;
+    height: 50%;
+}
+
+@media screen and (max-width: 768px) {
+
+.works-right_image {
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 3%;
+    overflow-y: auto;
+}
+
+.label {
+    padding-left: 40px;
+    padding-right: 20%;
 }
 
 }
