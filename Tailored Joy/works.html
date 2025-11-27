@@ -106,14 +106,14 @@
 
             <!-- SP版　横から出てくる -->
             <div class="sp-drawer">
-                <div class="works-drawer-trigger">
+                <div class="works-right-push">
                     <p>作品一覧</p>
-                    <div class="drawer-close-icon">
+                    <div class="works-right-closeicon">
                         <span></span>
                     </div>
                 </div>
 
-                <nav class="works-drawer-menu">
+                <nav class="works-right-push-menu">
                     <ul class="works-menu-list">
                         <li><a href="#all">ALL</a></li>
                         <li><a href="#website">WEB SITE</a></li>
@@ -311,19 +311,15 @@
             });
 
 
-            // 作品一覧ドロワーメニューの動作
-            var $drawerMenu = $('.works-drawer-menu');
-            var $drawerTrigger = $('.works-drawer-trigger');
-
-            // トリガーボタンをクリックした時の処理 (開閉)
-            $drawerTrigger.on('click', function () {
-                // is-open クラスを付け外しすることでスライドイン/アウトを制御
-                $drawerMenu.toggleClass('is-open');
+            // ⭐作品一覧の動作
+            $(".works-right-push").on("click", function () {
+                $(".works-right-push-menu").toggleClass("is-open");
             });
 
-            // メニュー内のリンクをクリックした時もメニューを閉じる (UX向上のため)
-            $('.works-menu-list a').on('click', function () {
-                $drawerMenu.removeClass('is-open');
+            // メニュー内のリンクをクリックした時も閉じる処理
+            $(".works-menu-list a").on("click", function () {
+                $(".works-right-push-menu").removeClass("is-open");
+                $(".works-right-push").removeClass("open");
             });
 
 

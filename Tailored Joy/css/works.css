@@ -164,10 +164,10 @@ section {
 @media screen and (max-width: 768px) {
 /* 横から出てくる部分 */
 .sp-drawer{
-    display: block;
+    display:block;
 }
 
-.works-drawer-trigger {
+.works-right-push {
     position: fixed; /* 画面に固定 */
     top: 25%;
     right: 0;
@@ -180,29 +180,24 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:first baseline;
     border-radius: 22px 0 0 22px;
 }
 
-.works-drawer-trigger p {
+.works-right-push p {
     writing-mode: vertical-rl; /* 縦書き */
     letter-spacing: 1.6px;
     color: #fff;
-    position: absolute;
-    z-index: 999;
+    padding-top: 34px;
 }
 
-.drawer-close-icon span {
+.works-right-closeicon span {
     display: block;
-    font-size: 20px;
-    line-height: 1;
-    padding-top: 95px;
-    color: #fff;
-    width: 10px;
-    height: 1px;
+    width: 13px;
+    margin-top: 26px;
+    border: solid 1px #fff;
 }
 
-.works-drawer-menu {
+.works-right-push-menu {
     position: fixed;
     top: 200px;
     right: 0;
@@ -215,11 +210,12 @@ section {
     padding: 10px 10px 20px;
     transition: transform 0.4s ease-out;
     border-radius: 22px 0 0 22px;
+    transform: translateX(100%);
 }
 
-/* 💡 表示状態: translateX(0)で元の位置に戻し、画面内に表示する */
-.works-drawer-menu.is-open {
-    transform: translateX(0);
+/* translateX(0)で元の位置に戻し、画面内に表示する */
+.works-right-push-menu.is-open {
+    transform: translateX(0); /* スライドインして表示 */
 }
 
 .works-menu-list li {
