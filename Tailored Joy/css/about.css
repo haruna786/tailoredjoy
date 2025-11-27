@@ -110,10 +110,7 @@
 }
 
 .icon-item:hover {
-    padding-top: 30px;
-    transition: transform 0.2s, opacity 0.2s;
-
-    /* ？？？？上に上げたい？？？？ */
+    transform: translateY(-20px);
 }
 
 .icon-circle {

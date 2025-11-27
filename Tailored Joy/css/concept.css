@@ -179,8 +179,7 @@ body {
 
 .step-content p {
     margin: 0 auto;
-    width: calc(100% - 430px);
-  /* 親要素の全幅 (100%) から430ピクセルを差し引いた値 */
+    width: 60%;
     line-height: 2.2;
 }
 
