@@ -19,7 +19,6 @@
     <script src="script.js"></script>
 </head>
 
-
 <body>
     <!-- ヘッダー部分 -->
     <header id="header">
@@ -33,11 +32,13 @@
         </div>
         <nav class="header_nav">
             <ul class="hamburger_illust">
-                <li><a href="#top"><img src="./images/strawberry.PNG" alt="strawberry" /></a></li>
+                <li><a href="#top"><img src="./images/strawberry-2.png" alt="strawberry" /></a></li>
                 <li><a href="#concept"><img src="./images/dog1.PNG" alt="dog" /></a></li>
                 <li><a href="#works"><img src="./images/flowers_illust.PNG" alt="flower" /></a></li>
                 <li><a href="#about"><img src="./images/ribbon.PNG" alt="ribbon" /></a></li>
             </ul>
+            <div class="hameru-txt">MENU</div>
+
             <ul class="hamburger_text">
                 <li><a href="#top"><img src="./images/top_text_pc.png" alt="top" /></a></li>
                 <li><a href="#concept"><img src="./images/concept_text_pc.png" alt="concept"></a></li>
@@ -67,7 +68,7 @@
                             alt="contact"></a></li>
             </ul>
             <ul class="hamburger-sp_illust">
-                <li><img src="./images/strawberry.PNG" alt="strawberry"></li>
+                <li><img src="./images/strawberry-2.png" alt="strawberry"></li>
                 <li><img src="./images/dog1.PNG" alt="dog"></li>
                 <li><img src="./images/flowers_illust.PNG" alt="flower"></li>
                 <li><img src="./images/ribbon.PNG" alt="ribbon"></li>
@@ -92,7 +93,7 @@
             <div class="sticky_wrap">
                 <div class="horizontal_scroll">
                     <div class="scrool-content">
-                        <img src="./images/strawberry.PNG" alt="いちごの画像" class="illust-fv" />
+                        <img src="./images/strawberry-2.png" alt="いちごの画像" class="illust-fv" />
                         <img src="./images/flowers_illust.PNG" alt="お花の画像" class="illust-fv" />
                         <img src="./images/moon.PNG" alt="月の画像" class="illust-fv" />
                         <img src="./images/wood.PNG" alt="観葉植物の画像" class="illust-fv" />
@@ -120,12 +121,14 @@
                 <img src="./images/viewmore.png" alt="viewmore" class="viewmore_buttton">
             </a>
             <div class="dog-illustration-container">
-                <div class="dog-callout">wan
-                    <span></span>
-                </div>
                 <div class="dog-illust-images">
-                    <img src="./images/dog2.PNG" alt="お座りをしている犬" class="sitdog">
-                    <img src="./images/dog3.PNG" alt="立っている犬" class="standdog">
+                    <div class="dog-callout">wan
+                        <span></span>
+                    </div>
+                    <div class="dog-click-image">
+                        <img src="./images/dog2.PNG" alt="お座りをしている犬" class="sitdog">
+                        <img src="./images/dog3.PNG" alt="立っている犬" class="standdog">
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,7 +228,7 @@
                     <img src="./images/flowers_illust.PNG" alt="お花の画像" />
                 </li>
                 <li class="image2">
-                    <img src="./images/strawberry.PNG" alt="いちごの画像" />
+                    <img src="./images/strawberry-2.png" alt="いちごの画像" />
                 </li>
                 <li class="image2">
                     <img src="./images/ribbon.PNG" alt="リボンの画像" />
@@ -246,7 +249,7 @@
                     <img src="./images/flowers_illust.PNG" alt="お花の画像" />
                 </li>
                 <li class="image2">
-                    <img src="./images/strawberry.PNG" alt="いちごの画像" />
+                    <img src="./images/strawberry-2.PNG" alt="いちごの画像" />
                 </li>
             </ul>
         </div>
@@ -365,84 +368,7 @@
     <script src="./dist/js/lightbox-plus-jquery.min.js"></script>
     <!-- slick読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-
-    <script>
-        // ハンバーガーメニュー
-        $(function () {
-            $(".hamburger").click(function () {
-                $(".hamburger").toggleClass("open");
-                // $(".header_nav").fadeToggle();
-            })
-        })
-
-        $(function () {
-            $(".hamburger-sp").click(function () {
-                $(".hamburger-sp").toggleClass("open-sp");
-                $(".header_nav-sp").fadeToggle();
-            })
-        });
-    </script>>
-
-    <script>
-        // slick
-
-        // worksのスライド
-        $('.works_image').slick({
-            pauseOnHover: false,    // ホバーで止めない
-            centerMode: true,       // **中央の画像を強調 両サイドを表示**
-            centerPadding: "20%",   // **中央の画像の両端の表示領域を設定 (重要)**
-            lazyLoad: 'ondemand',
-            autoplay: true, //自動再生
-            autoplaySpeed: 4000,// 0秒間隔で動く
-            slidesToShow: 3,        // 一度に表示するスライドの数
-            slidesToScroll: 1,
-            dots: true,             // ドットナビゲーション
-            arrows: true,            // 矢印ナビゲーション
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    centerPadding: '10%',
-                }
-            }]
-        });
-
-
-        // イラストスライド
-        $(".illust_image").slick({
-            arrows: true,// 横スクロールが消える
-            dots: false,
-            autoplay: true, //自動再生
-            autoplaySpeed: 0,// 0秒間隔で動く
-            slidesToShow: 10, //1度に10つのスライド表示
-            Infinity: true,//ループ
-            cssEase: 'linear', //動きを滑らかに
-            speed: 5000, // スライド速度を調整
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 7
-                }
-            }]
-        });
-
-
-
-
-    </script>
-
-
-</body>
-
-</html>
-
-
-
-
-
-
-
+    <script src="./js/script.js"></script>
 
 
 </body>

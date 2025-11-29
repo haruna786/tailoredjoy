@@ -53,7 +53,7 @@
                             alt="contact"></a></li>
             </ul>
             <ul class="hamburger-sp_illust">
-                <li><img src="./images/strawberry.PNG" alt="strawberry"></li>
+                <li><img src="./images/strawberry-2.png" alt="strawberry"></li>
                 <li><img src="./images/dog1.PNG" alt="dog"></li>
                 <li><img src="./images/flowers_illust.PNG" alt="flower"></li>
                 <li><img src="./images/ribbon.PNG" alt="ribbon"></li>
@@ -133,7 +133,7 @@
                         <!-- 作品1 -->
                         <div class="space">
                             <div class="space-back2">
-                                <a href="works-site-tailoredjoy.html">
+                                <a href="../Tailored Joy/works/works-site-tailoredjoy.html">
                                     <img src="./images/works-site-img.png" alt="ポートフォリオサイト" class="work-image">
                                 </a>
                             </div>
@@ -156,7 +156,7 @@
                         <!-- 作品1 -->
                         <div class="space">
                             <div class="space-back2">
-                                <a href="works-lp-salon.html">
+                                <a href="../Tailored Joy/works/works-lp-salon.html">
                                     <img src="./images/kadai5_mock_PC.png" alt="架空美容室サイト" class="work-image">
                                 </a>
                             </div>
@@ -165,7 +165,7 @@
                         <!-- 作品2 -->
                         <div class="space">
                             <div class="space-back2">
-                                <a href="works-lp-cofeshop.html">
+                                <a href="../Tailored Joy/works/works-lp-cafeshop.html">
                                     <img src="./images/kadai6_capcha.png" alt="架空コーヒーショップLP" class="work-image">
                                 </a>
                             </div>
@@ -174,7 +174,7 @@
                         <!-- 作品3 -->
                         <div class="space">
                             <div class="space-back2">
-                                <a href="works-lp-workers.html">
+                                <a href="../Tailored Joy/works/works-lp-workers.html">
                                     <img src="./images/kadai4_1440px.png" alt="架空コワーキングスペースLP" class="work-image">
                                 </a>
                             </div>
@@ -195,7 +195,7 @@
                         <!-- 作品1 -->
                         <div class="space">
                             <div class="space-back2">
-                                <a href="works-banner-humberger.html">
+                                <a href="../Tailored Joy/works/works-banner-humberger.html">
                                     <img src="./images/kadai3_ikeda_02_ver1.gif" alt="架空ハンバーガーバナー" class="work-image">
                                 </a>
                             </div>
@@ -204,7 +204,7 @@
                         <!-- 作品2 -->
                         <div class="space">
                             <div class="space-back2">
-                                <a href="works-banner-icecream.html">
+                                <a href="../Tailored Joy/works/works-banner-icecream.html">
                                     <img src="./images/kadai2_ikeda_03_ver1.gif" alt="架空アイスクリームバナー" class="work-image">
                                 </a>
                             </div>
@@ -213,7 +213,7 @@
                         <!-- 作品3 -->
                         <div class="space">
                             <div class="space-back2">
-                                <a href="works-banner-smartphone.html">
+                                <a href="../Tailored Joy/works/works-banner-smartphone.html">
                                     <img src="./images/kadai1_ikeda.gif" alt="架空スマートフォンバナー" class="work-image">
                                 </a>
                             </div>
@@ -234,7 +234,7 @@
                         <!-- 作品1 -->
                         <div class="space">
                             <div class="space-back2">
-                                <a href="works-illust1.html">
+                                <a href="../Tailored Joy/works/works-illust1.html">
                                     <img src="./images/illust-3.png" alt="装飾イラスト" class="work-image">
                                 </a>
                             </div>
@@ -243,7 +243,7 @@
                         <!-- 作品2 -->
                         <div class="space">
                             <div class="space-back2">
-                                <a href="works-illust2.html">
+                                <a href="../Tailored Joy/works/works-illust2.html">
                                     <img src="./images/illust-1.jpg" alt="結婚式イラスト" class="work-image">
                                 </a>
                             </div>
@@ -315,32 +315,7 @@
     <script src="./dist/js/lightbox-plus-jquery.min.js"></script>
     <!-- slick読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-
-    <script>
-        $(function () {
-            $(".hamburger").click(function () {
-                $(".hamburger").toggleClass("open");
-                $(".header_nav-sp").fadeToggle();
-            });
-
-
-            // 作品一覧の動作
-            $(".works-right-push").on("click", function () {
-                $(".works-right-push-menu").toggleClass("is-open");
-            });
-
-            // メニュー内のリンクをクリックした時も閉じる処理
-            $(".works-menu-list a").on("click", function () {
-                $(".works-right-push-menu").removeClass("is-open");
-                $(".works-right-push").removeClass("open");
-            });
-
-
-
-        });
-    </script>
-
+    <script src="../js/script.js"></script>
 
 </body>
 

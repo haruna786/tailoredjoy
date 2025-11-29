@@ -46,6 +46,14 @@
 .slick-dots li button:before {
     color: #fff;
 }
+.hameru-txt{
+    margin: 5px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    z-index: 4;
+}
+
 
 /* SP Ver */
 @media screen and (max-width: 1100px) {
