@@ -111,7 +111,7 @@ section {
     border: 1px solid #3c3c3c;
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     aspect-ratio: 4 / 3;
     display: flex;
     align-items: center;
@@ -119,17 +119,16 @@ section {
     overflow: hidden;
     background-color: #ffffff;
     background-image: radial-gradient(circle, #56210087 23px, transparent 23px);
-    background-position: -40px -27px;
-    background-size: 125px 83px;
+    background-position: -25px -15px;
+    background-size: 80px 83px;
 }
 .space-back2 {
     border: 1px solid #3c3c3c;
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     aspect-ratio: 4 / 3;
     display: flex;
-    align-items: center;
     justify-content: center;
     overflow: hidden;
     background-color: #fff;

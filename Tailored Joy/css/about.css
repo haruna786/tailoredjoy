@@ -1,10 +1,24 @@
 @charset "utf-8";
-.dots{
-    background-color: #ffffff;
-    background-image: radial-gradient(circle, #CCC 50px, transparent 50px), radial-gradient(circle, #CCC 50px, transparent 50px);
-    background-position: 0 0, 200px 200px;
-    background-size: 400px 400px;
+.dots-content {
+    background-image: radial-gradient(#dbf3f9 35%, transparent 13%);
+    background-size: 450px 450px;
+    min-height: 100%;
+    width: 100vw;
+    height: 100%;
+    animation: ani 80s linear infinite;
 }
+
+
+@keyframes ani {
+	0% { background-position: 0% 0%; }
+	100% { background-position: 350% 100%; }
+}
+
+
+/* ============================================== */
+/* ============================================== */
+
+
 
 .container {
     width: 80%;
@@ -127,8 +141,7 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    /* position: relative;
-    z-index: 2; */
+
 }
 
 .icon-circle img {
@@ -275,6 +288,15 @@
 /* レコメンド */
 
 @media screen and (max-width: 768px) {
+.dots-content {
+    background-image: radial-gradient(#dbf3f9 25%, transparent 13%);
+    background-size: 280px 280px;
+    min-height: 100%;
+    width: 100vw;
+    height: 100%;
+    animation: ani 80s linear infinite;
+}
+
 
 .big-about {
     display: none;

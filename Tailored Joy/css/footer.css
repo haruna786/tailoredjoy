@@ -1,4 +1,8 @@
 @charset "utf-8";
+html{
+    scroll-behavior: smooth;
+}
+
 .footer_sp_content,
 .footer_logo_sp,
 .footer_contact_sp,
@@ -13,11 +17,14 @@ footer {
     background-color:#7b6c5f;
     overflow: hidden;
 }
+.footer-dot{
+    position: relative;
+    bottom: 20px;
+}
+
 .footer-dots {
     position: absolute;
-    top: -5%;
     right: 0;
-    left: auto; /* 左からの指定を解除 */
     width: 60%; /* サイズを調整 */
     height: 60px;
     object-fit: cover;
@@ -84,6 +91,17 @@ footer {
     height: 100%;
 }
 
+/* 画像を回す */
+/* 回転アニメーションの定義 */
+@keyframes rotateAnimation {
+    from {
+    transform: rotate(0deg);
+}
+    to {
+    transform: rotate(360deg);
+}
+}
+
 /* PAGE TOPの枠画像 (top_scroll.png) */
 .pagetop-frame {
     position: absolute;
@@ -92,6 +110,7 @@ footer {
     width: 50%;
     height: 50%;
     object-fit: contain;
+    animation: rotateAnimation 15s linear infinite;
 }
 /* 観葉植物のイラスト (wood.PNG) */
 .pagetop-wood {
@@ -111,6 +130,9 @@ footer {
 .footer_logo img{
     width: 85%;
 }
+
+
+
 
 @media screen and (max-width: 768px) {
 
