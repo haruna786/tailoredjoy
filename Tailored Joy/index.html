@@ -16,7 +16,6 @@
     <!-- デザインcss読み込み -->
     <link rel="stylesheet" href="./css/style.css" />
     <limk rel="stylesheet" href="./css/header.css" />
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -29,6 +28,8 @@
         <!-- PCのハンバーガー部分 -->
         <div class="hamburger">
             <span></span>
+            <div class="hameru-txt">MENU</div>
+
         </div>
         <nav class="header_nav">
             <ul class="hamburger_illust">
@@ -37,7 +38,6 @@
                 <li><a href="#works"><img src="./images/flowers_illust.PNG" alt="flower" /></a></li>
                 <li><a href="#about"><img src="./images/ribbon.PNG" alt="ribbon" /></a></li>
             </ul>
-            <div class="hameru-txt">MENU</div>
 
             <ul class="hamburger_text">
                 <li><a href="#top"><img src="./images/top_text_pc.png" alt="top" /></a></li>
@@ -53,6 +53,7 @@
                     <a href="contact.html"><img src="./images/contact_button2.png" alt="contact" /></a>
                 </div>
             </div>
+
         </nav>
         <!-- SPのハンバーガー部分 -->
         <div class="hamburger-sp">
@@ -75,30 +76,46 @@
             </ul>
         </nav>
 
-        <!-- ファーストビュー -->
-        <div class="firstview">
-            <img src="./images/background_FV.jpg" alt="背景の紙のテクスチャ" class="background-img" />
-            <div class="overlay-content">
-                <div class="main-visual">
-                    <img src="./images/fv_illust-ver2.png" alt="左右の線画イラスト" class="illustration-pc">
-                    <img src="./images/fv_illust-sp.png" alt="左右の線画イラスト" class="illustration-sp">
-                    <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY" class="title-img">
-                    <span class="enjoy-text">enjoy...!</span>
-                </div>
-            </div>
-        </div>
-
         <!-- 横スクロール -->
         <div class="scroll_container">
             <div class="sticky_wrap">
                 <div class="horizontal_scroll">
-                    <div class="scrool-content">
-                        <img src="./images/strawberry-2.png" alt="いちごの画像" class="illust-fv" />
-                        <img src="./images/flowers_illust.PNG" alt="お花の画像" class="illust-fv" />
-                        <img src="./images/moon.PNG" alt="月の画像" class="illust-fv" />
-                        <img src="./images/wood.PNG" alt="観葉植物の画像" class="illust-fv" />
-                        <img src="./images/dog1.PNG" alt="犬が寝ている画像" class="illust-fv" />
-                        <img src="./images/ribbon.PNG" alt="リボンの画像" class="illust-fv" />
+                    <!-- ファーストビュー -->
+                    <div class="firstview">
+                        <img src="./images/background_FV.jpg" alt="背景の紙のテクスチャ" class="background-img" />
+                        <div class="overlay-content">
+                            <div class="main-visual">
+                                <img src="./images/fv_illust-ver2.png" alt="左右の線画イラスト" class="illustration-pc">
+                                <img src="./images/fv_illust-sp.png" alt="左右の線画イラスト" class="illustration-sp">
+                                <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY" class="title-img">
+                                <span class="enjoy-text">enjoy...!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- イラストの横スクロール部分 -->
+                    <div class="image-section-wrap">
+                        <img src="./images/background_FV.jpg" alt="背景の紙のテクスチャ" class="background-img" />
+
+                        <div class="image-grid-container">
+                            <div class="image-item">
+                                <img src="./images/strawberry-2.png" alt="いちごの画像" class="illust-fv" />
+                            </div>
+                            <div class="image-item">
+                                <img src="./images/flowers_illust.PNG" alt="お花の画像" class="illust-fv" />
+                            </div>
+                            <div class="image-item">
+                                <img src="./images/moon.PNG" alt="月の画像" class="illust-fv" />
+                            </div>
+                            <div class="image-item">
+                                <img src="./images/wood.PNG" alt="観葉植物の画像" class="illust-fv" />
+                            </div>
+                            <div class="image-item-dog">
+                                <img src="./images/dog1.PNG" alt="犬が寝ている画像" class="illust-fv" />
+                            </div>
+                            <div class="image-item">
+                                <img src="./images/ribbon.PNG" alt="リボンの画像" class="illust-fv" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,16 +142,13 @@
                     <div class="dog-callout">wan
                         <span></span>
                     </div>
-                    <div class="dog-click-image">
-                        <img src="./images/dog2.PNG" alt="お座りをしている犬" class="sitdog">
-                        <img src="./images/dog3.PNG" alt="立っている犬" class="standdog">
-                    </div>
+                    <!-- jsで動かす -->
+                    <div id="dog-click-image"></div>
                 </div>
             </div>
-        </div>
-        <div class="dot-sidebar">
-            <img src="./images/dotto_rectangle2.png" alt="ドットの装飾" />
-        </div>
+            <div class="dot-sidebar">
+                <img src="./images/dotto_rectangle2.png" alt="ドットの装飾" />
+            </div>
     </section>
 
     <!-- ナビゲーションバー -->
@@ -152,9 +166,8 @@
 
     <!-- ワークス -->
     <section id="works">
-        <div class="works-back">
-            <img src="./images/background_FV.jpg" alt="背景画像" />
-        </div>
+        <!-- jsで動かす -->
+        <div id="works-back"> </div>
         <div class="works_content_wrapper">
             <h2 class="heading_h2">
                 <img src="./images/works_text-big_pc.png" alt="works" class="works-title_big" />
@@ -257,7 +270,8 @@
 
     <!-- アバウト -->
     <section id="about">
-        <img src="./images/about_back1.png" alt="背景画像（青）" class="about-back">
+        <!-- jsで動かす -->
+        <div id="back-change"></div>
         <img src="./images/dotto_circle.png" alt="ドット背景の装飾" class="about-dots">
 
         <div class="about-main-content">

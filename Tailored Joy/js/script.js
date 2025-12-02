@@ -83,3 +83,71 @@ $(".works-menu-list a").on("click", function () {
 $(".works-right-push-menu").removeClass("is-open");
 $(".works-right-push").removeClass("open");
 });
+
+
+
+
+// ====================
+// TOP
+// 横スライド部分
+// ====================
+
+
+
+// HTMLドキュメント全体 の中から、セレクター(.sticky_wrap)に一致するすべての要素を
+// stickySections という名前の定数（再代入できない変数）として宣言
+// （height: 400vhを持つ要素）
+const stickySections = [...document.querySelectorAll('.sticky_wrap')]
+
+
+window.addEventListener('scroll', (e) => {
+  for(let i = 0; i < stickySections.length; i++){
+    transform(stickySections[i])
+  }
+})
+
+function transform(section) {
+
+  const offsetTop = section.parentElement.offsetTop;
+  const scrollSection = section.querySelector('.horizontal_scroll')
+
+  let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+
+  percentage = percentage < 0 ? 0 : percentage > 100 ? 100 : percentage;
+  scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`
+}
+
+// // 犬がスクロールに合わせて大きくなる
+
+$(function () {
+    /* スクロール量　代入用 */
+    var scroll;
+    /* 円の大きさ+スクロール量　代入用 */
+    var sum;
+    $(window).scroll(function () {
+        /* スクロール量を取得 */
+        scroll = $(this).scrollTop();
+        /* コンソールログで確認  */
+        console.log(scroll);
+        /* 円の大きさ+スクロール量 / 60*/
+        sum = 1 + scroll / 60;
+        console.log(sum);
+        /* 円の大きさにスクロール量を足す */
+        $(".image-item-dog").css({
+            "transform": "scale(" + sum + ")"
+        })
+    })
+})
+
+
+// クリックすると犬の画像+背景が変わる
+const barking = document.getElementById("dog-click-image");
+const changing = document.getElementById("back-change");
+const changing2 = document.getElementById("works-back");
+
+function changeImg(){
+barking.classList.toggle("on_dog-click");
+changing.classList.toggle("on_back-change");
+changing2.classList.toggle("on_works-back");
+}
+barking.addEventListener("click",changeImg);

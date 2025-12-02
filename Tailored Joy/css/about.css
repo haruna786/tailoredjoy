@@ -109,9 +109,14 @@
     position: relative;
 }
 
-.icon-item:hover {
+
+.icon-item .icon-circle {
+    transition: 0.3s;
+}
+.icon-item:hover .icon-circle {
     transform: translateY(-20px);
 }
+
 
 .icon-circle {
     width: 150px;

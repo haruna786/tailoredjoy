@@ -67,7 +67,7 @@
     background-color: #000;
     border-radius: 25px;
     position: fixed;
-    top: 30px;
+    top: 10px;
     right: 10px;
     z-index: 9999;/* 最大値 */
     cursor: pointer;
@@ -150,5 +150,13 @@
     left: 20%;
     border-top: #000 solid 3px;
     padding-top: 45px;
+}
+
+.logo{
+    width : 170px;
+    height: auto;
+    padding-top: 20px;
+    padding-left: 25px;
+    z-index: 9999;
 }
 }
