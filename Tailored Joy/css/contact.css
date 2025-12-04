@@ -38,8 +38,10 @@
 .explanation{
     padding-top: 70px;
     padding-bottom: 70px;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 1.5;
+    max-width: 1000px;
+    margin: auto;
 }
 
 form {

@@ -1436,6 +1436,8 @@ height:auto;
 
 .description p {
     max-width: 400px;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 /* VIEW ALL ボタン */

@@ -73,7 +73,7 @@ barking.addEventListener("click",changeImg);
 $(function () {
 // コンセプトセクションの上端のY座標を取得
 // offset().top→ページの一番上からコンセプトセクションまでの距離
-    const conceptPos = $('#works').offset().top;
+    const conceptPos = $('#concept').offset().top;
     $(window).on('scroll', function() {
         const scrollTop = $(window).scrollTop();
         // スクロールがworksを過ぎたとき

@@ -2,7 +2,7 @@
 .works-all {
     display: flex;
     justify-content: center;
-    padding: 80px 45px;
+    padding: 80px 65px;
     background-color: #a9c4c8;
 }
 
@@ -63,7 +63,6 @@
 .works-right {
     width: 75%;
     padding-left: 110px;
-    padding-top: 10%;
     overflow-y: auto;
 }
 
@@ -138,7 +137,8 @@ section {
 
 /* 作品の説明 */
 .description {
-    font-size:19px;
+    font-size:16px;
+    padding-top: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -307,6 +307,7 @@ section {
 }
 .point-text{
     padding: 20px 30px 40px 40px;
+    line-height: 1.8;
 }
 .image-banner{
     margin: 0 auto;
