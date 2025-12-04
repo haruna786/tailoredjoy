@@ -778,6 +778,7 @@ height:auto;
     top: 0px;
     left: 0;
     width: 100%;
+    padding-bottom: 30px;
     background-color: #fff;
     visibility: hidden;
     opacity: 0;
@@ -793,7 +794,7 @@ height:auto;
     justify-content: flex-end;
     gap: 55px;
     margin-right: 73px;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 .hidden-area {
     height: 100vh;
@@ -837,6 +838,10 @@ height:auto;
 
 @media screen and (max-width: 768px) {
 .header_nav2 ul{
+    display: none;
+}
+
+.header_nav2.active{
     display: none;
 }
 }
@@ -1391,7 +1396,7 @@ height:auto;
     bottom: 0;
     width: 100px;
     height: auto;
-    z-index: -1;
+    z-index: 3;
 }
 
 .about-main-content {
