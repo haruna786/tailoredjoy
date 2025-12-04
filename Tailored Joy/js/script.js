@@ -1,3 +1,34 @@
+// ローディング
+document.addEventListener('DOMContentLoaded', function() {
+    const loading = document.getElementById('loading');
+    const progressBar = document.getElementById('progress');
+    const progressText = document.getElementById('progress-text');
+
+    let progress = 0;
+
+    function updateProgress() {
+        if (progress < 100) {
+            progress += Math.random() * 30;
+            if (progress > 100) progress = 100;
+
+            progressBar.style.width = `${progress}%`;
+            progressText.textContent = `${Math.round(progress)}%`;
+
+            if (progress < 100) {
+                setTimeout(updateProgress, 200);
+            } else {
+                setTimeout(() => {
+                    loading.style.display = 'none';
+                    content.classList.add('show');
+                }, 500);
+            }
+        }
+    }
+
+    updateProgress();
+});
+
+
 // ====================
 // ⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎topページ⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎
 // ====================

@@ -21,14 +21,28 @@
 
 
 <body>
-    <div class="dots-content">
+    <!-- ローディング -->
+    <div class="loading" id="loading">
+        <div class="loading-txt">
+            <p class="loading-text">LOADING...</p>
+            <p id="progress-text">0%</p>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+        <div id="showloading">
+            <img src="../Tailored Joy/images/run1.gif">
+        </div>
+    </div>
 
+    <div class="dots-content">
         <!-- ヘッダー部分 -->
         <header id="header">
             <div class="header_inner">
                 <h1 class="logo">
-                    <a href="./index.html"></a>
-                    <img src="./images/tailoredjoy_logo.png" alt="ロゴ" />
+                    <a href="../Tailored Joy/index.html">
+                        <img src="./images/tailoredjoy_logo.png" alt="ロゴ" />
+                    </a>
                 </h1>
                 <nav class="header_nav">
                     <ul>
