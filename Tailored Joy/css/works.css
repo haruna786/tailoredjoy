@@ -322,6 +322,9 @@ section {
     width: 50%;
     height: 50%;
 }
+p{
+    padding-bottom: 2px;
+}
 
 @media screen and (max-width: 768px) {
 
