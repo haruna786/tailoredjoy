@@ -1046,6 +1046,11 @@ height:auto;
     height: auto;
     display: block;
 }
+
+.view-all-link:hover{
+    transform: translateY(3px);
+}
+
 @media screen and (max-width: 768px) {
 
 #works-back {
@@ -1383,6 +1388,10 @@ height:auto;
     display: block;
 }
 
+.about-viewmore-link img:hover{
+    transform: translateY(4px);
+}
+
 @media screen and (max-width: 767px) {
 
 #back-change{
@@ -1551,7 +1560,7 @@ button {
     z-index: 2;
 }
 
-button::after {
+.google-form button::after {
     background: #e9d8e3;
     border-radius: 50%;
     content: "";
@@ -1578,7 +1587,7 @@ button:hover {
     color: #000;
     border: 1px solid #000;
 }
-button:hover::after {
+.google-form button:hover::after {
     opacity: 1;
     transform: translateY(-50%) scale(1.1);
     transition-delay: 0s;
