@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loading = document.getElementById('loading');
     const progressBar = document.getElementById('progress');
     const progressText = document.getElementById('progress-text');
+    const progressDot = document.getElementById('progress-dot');
 
     let progress = 0;
 
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             progress += Math.random() * 30;
             if (progress > 100) progress = 100;
 
+            progressDot.style.width = `${progress}%`;
             progressBar.style.width = `${progress}%`;
             progressText.textContent = `${Math.round(progress)}%`;
 
