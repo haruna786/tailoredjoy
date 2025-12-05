@@ -1,72 +1,57 @@
-// ローディング
-document.addEventListener('DOMContentLoaded', function() {
-    const loading = document.getElementById('loading');
-    const progressBar = document.getElementById('progress');
-    const progressText = document.getElementById('progress-text');
-    const progressDot = document.getElementById('progress-dot');
-
-    let progress = 0;
-
-    function updateProgress() {
-        if (progress < 100) {
-            progress += Math.random() * 30;
-            if (progress > 100) progress = 100;
-
-            progressDot.style.width = `${progress}%`;
-            progressBar.style.width = `${progress}%`;
-            progressText.textContent = `${Math.round(progress)}%`;
-
-            if (progress < 100) {
-                setTimeout(updateProgress, 200);
-            } else {
-                setTimeout(() => {
-                    loading.style.display = 'none';
-                    content.classList.add('show');
-                }, 500);
-            }
-        }
-    }
-
-    updateProgress();
-});
-
-
 // ====================
 // ⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎topページ⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎⭐︎
 // ====================
 
 // ハンバーガーメニュー
 $(function () {
-    $(".hamburger").click(function () {
+  $(".hamburger").click(function () {
     $(".hamburger").toggleClass("open");
     // $(".header_nav").fadeToggle();
-    });
+  });
 });
 
 $(function () {
-    $(".hamburger-sp").click(function () {
-    $(".hamburger-sp").toggleClass("open-sp");
-    $(".header_nav-sp").fadeToggle();
-    });
+  $(".hamburger").click(function () {
+    if (window.innerWidth <= 768) {
+      $(".hamburger").toggleClass("open-sp");
+      $(".header_nav-sp").fadeToggle();
+    }
+  });
+});
+$(function () {
+  $(".hamburger-sp").click(function () {
+    if (window.innerWidth <= 768) {
+      $(".hamburger-sp").toggleClass("open-sp");
+      $(".header_nav-sp").fadeToggle();
+    }
+  });
 });
 
 
+
 // クリックすると犬の画像+背景が変わる
-// 定義
-const barking = document.getElementById("dog-click-image");
-const changing = document.getElementById("back-change");
-const changing2 = document.getElementById("works-back");
-const coloring = document.getElementById("back-color");
-// 動作
-function changeColor(){
-coloring.classList.toggle("on_back-color");
-}
-function changeImg(){
-barking.classList.toggle("on_dog-click");
-changing.classList.toggle("on_back-change");
-changing2.classList.toggle("on_works-back");
-}
-barking.addEventListener("click",changeImg);
+$(function () {
+  // URLに "index.html" が含まれていたら実行
+  if (location.pathname.endsWith("index.html") || location.pathname === "/") {
+    const barking = $("#dog-click-image");
+    const changing = $("#back-change");
+    const changing2 = $("#works-back");
+    const coloring = $("#back-color");
+
+    function changeColor() {
+      coloring.toggleClass("on_back-color");
+    }
+
+    function changeImg() {
+      barking.toggleClass("on_dog-click");
+      changing.toggleClass("on_back-change");
+      changing2.toggleClass("on_works-back");
+    }
+
+    // クリックイベント
+    barking.on("click", changeImg);
+  }
+});
 
 
 // ２つ目のナビゲーション

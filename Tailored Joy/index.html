@@ -97,7 +97,7 @@
                 <div class="horizontal_scroll">
                     <!-- ファーストビュー -->
                     <div class="firstview">
-                        <img src="./images/background_FV.jpg" alt="背景の紙のテクスチャ" class="background-img" />
+                        <!-- <img src="./images/background_FV.jpg" alt="背景の紙のテクスチャ" class="background-img" /> -->
                         <div class="overlay-content">
                             <div class="main-visual">
                                 <img src="./images/fv_illust-ver2.png" alt="左右の線画イラスト" class="illustration-pc">
@@ -417,6 +417,40 @@
     <!-- slick読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script>
+        // ローディング
+        document.addEventListener("DOMContentLoaded", function () {
+            const loading = document.getElementById("loading");
+            const progressBar = document.getElementById("progress");
+            const progressText = document.getElementById("progress-text");
+            const progressDot = document.getElementById("progress-dot");
+
+            let progress = 0;
+
+            function updateProgress() {
+                if (progress < 100) {
+                    progress += Math.random() * 30;
+                    if (progress > 100) progress = 100;
+
+                    progressDot.style.width = `${progress}%`;
+                    progressBar.style.width = `${progress}%`;
+                    progressText.textContent = `${Math.round(progress)}%`;
+
+                    if (progress < 100) {
+                        setTimeout(updateProgress, 200);
+                    } else {
+                        setTimeout(() => {
+                            loading.style.display = "none";
+                            content.classList.add("show");
+                        }, 500);
+                    }
+                }
+            }
+
+            updateProgress();
+        });
+    </script>
 
 
 </body>

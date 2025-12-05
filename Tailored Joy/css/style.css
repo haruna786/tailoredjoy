@@ -60,18 +60,8 @@ body{
 .progress-bar {
     width: 0%;
     height: 100%;
-    background: linear-gradient(90deg, #E2E3E4FA,#eba1a1);
+    background: linear-gradient(90deg, #f2c586fa,#eba1a1);
     transition: width 0.3s ease;
-}
-
-.progress-dot {
-    position: absolute;
-    height: 35px;
-    background: #e71919;
-    border-radius: 50%;
-    top: 0px;
-    left: 0%; /* 初期位置 */
-    z-index: 999;
 }
 
 #showloading img{
@@ -91,9 +81,6 @@ html{
 }
 
 /* FV部分 */
-header{
-    max-width: 1440px;
-}
 
 .header-logo img,
 .hamburger-sp,
@@ -376,36 +363,91 @@ header{
 }
 
 .horizontal_scroll {
-    /* 実際に横移動する要素 */
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 200vw;
-    will-change: transform;
-    display: flex;
-    flex-wrap: nowrap;
+  /* 実際に横移動する要素 */
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 200vw;
+  will-change: transform;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+/* ==========
+犬大きくなる
+==========*/
+.scroll_container {
+  position: relative;
+  z-index: 10;
+}
+/* scroll_container が固定されるとき */
+.scroll_container.fixed {
+  position: fixed;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  width: 100%;
+  z-index: 10;
+}
+
+/* 背景の固定クローン */
+.background-img.bg-fixed-clone {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  pointer-events: none;
+  transition: opacity 0.3s linear;
+}
+
+/* 横スクロール内のイラストたち */
+.image-grid-container .image-item,
+.image-grid-container .image-item-dog {
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* 画面中央で動かす熊クローン */
+.dog-fixed-clone {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 30;
+  pointer-events: none;
+}
+
+.dog-fixed-clone img {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.2s linear, opacity 0.2s linear;
+}
+
+#back-color {
+  padding-top: 100vh;
 }
 
 /* ============================= */
 
 /* FVエリア*/
-.firstview {
+/* .firstview {
     position: relative;
     width: 100vw;
     height: 100vh;
-    flex-shrink: 0; /* 縮まないように設定 */
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
+} */
 
 /* オーバーレイコンテンツ */
 .overlay-content {
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 1440px;
     z-index: 1;
     padding: 20px;
     box-sizing: border-box;
@@ -540,6 +582,7 @@ header{
 }
 
 .image-grid-container {
+    max-width: 1070px;
     width: 100%; /* image-section-wrapの幅いっぱい */
     height: 100%;
     display: grid;
@@ -548,7 +591,7 @@ header{
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     padding: 40px 0;
-    margin: 0px 20%;
+    margin: 0px auto;
     z-index: 999;
 }
 
@@ -569,7 +612,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .image-item-dog img {
