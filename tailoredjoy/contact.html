@@ -70,36 +70,36 @@
 
             <form
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0zeF4UOa11TyPvhSS4K6IdO5_qNzZZ2ZbkdQ7LVTKjWS2JA/formResponse"
-                method="POST">
+                method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
 
                 <div class="contact-area">
                     <label>お名前<span class="required">必須</span></label>
-                    <input name="entry.869201519" type="text" name="name" placeholder="例）山田花子" value="">
+                    <input name="entry.473462044" type="text" name="name" placeholder="例）山田花子" value="">
                 </div>
 
                 <div class="contact-area">
                     <label>ふりがな<span class="required">必須</span></label>
-                    <input name="entry.831544916" type="text" name="furigana" placeholder="例）やまだはなこ" value="">
+                    <input name="entry.1196683306" type="text" name="furigana" placeholder="例）やまだはなこ" value="">
                 </div>
 
                 <div class="contact-area">
                     <label>メールアドレス<span class="required">必須</span></label>
-                    <input name="entry.1146717452" type="text" name="email" placeholder="例）tailoredjoy@example.com"
+                    <input name="entry.852097425" type="text" name="email" placeholder="例）tailoredjoy@example.com"
                         value="">
                 </div>
 
                 <div class="contact-area">
                     <label>会社名</label>
-                    <input name="entry.1165604584" type="text" name="company" placeholder="例）tailoredjoy株式会社" value="">
+                    <input name="entry.1774615760" type="text" name="company" placeholder="例）tailoredjoy株式会社" value="">
                 </div>
 
                 <div class="contact-area">
                     <label>お問い合わせ内容<span class="required">必須</span></label>
-                    <textarea name="entry.740560038" name="content" rows="5"
+                    <textarea name="entry.219183218" name="content" rows="5"
                         placeholder="お問い合わせ、お見積もり無料です。ご気軽にお問い合わせください。"></textarea>
                 </div>
 
-                <button type="submit"><a href="thankspage.html">送信する</a></button>
+                <button type="submit">送信する</button>
             </form>
         </section>
     </main>
@@ -169,6 +169,12 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/script.js"></script>
 
+
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='./thankspage.html';}"></iframe>
 </body>
 
 </html>
