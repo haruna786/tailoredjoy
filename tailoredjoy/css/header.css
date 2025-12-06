@@ -53,12 +53,27 @@
     font-weight: 600;
     z-index: 4;
 }
+@media screen and (max-width: 1000px) {
+.header_nav ul{
+    display: flex;
+    gap: 35px;
+    padding-right: 30px;
+    }
 
+    .logo {
+    width: 200px;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 40px;
+    z-index: 9999;
+}
+
+}
 
 /* SP Ver */
 @media screen and (max-width: 768px) {
-.header_nav{
-        display: none;
+.header_nav {
+    display: none;
 }
 .hamburger{
     display: block;

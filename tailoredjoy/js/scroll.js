@@ -2,9 +2,13 @@
 //犬がスクロールに合わせて大きくなる
 // ====================
 window.addEventListener("load", function () {
+// 横スクロール全体
   const scrollSection = document.querySelector(".scroll_container");
+//   犬の画像全体
   const dogItem = document.querySelector(".image-item-dog");
+// 犬の画像ファイル
   const dogImg = dogItem ? dogItem.querySelector("img") : null;
+//   犬以外の他のイラスト
   const otherItems = document.querySelectorAll(
     ".image-grid-container .image-item"
   );
@@ -12,8 +16,8 @@ window.addEventListener("load", function () {
   // 横スクロールエリア側の背景
   const bgImg = document.querySelector(".image-section-wrap .background-img");
 
-  // 犬フェーズのあとに続くコンテンツ（実際のクラス名に合わせて変更してね）
-  const nextSection = document.querySelector(".next-section");
+  // 犬フェーズのあとに続くコンテンツ
+  const nextSection = document.querySelector("#concept");
 
   if (!scrollSection || !dogItem || !dogImg) return;
 

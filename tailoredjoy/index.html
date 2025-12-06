@@ -15,6 +15,8 @@
     <link href="./dist/css/lightbox.min.css" rel="stylesheet">
     <!-- デザインcss読み込み -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
 
 </head>
 
@@ -65,7 +67,7 @@
                     <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY" />
                 </div>
                 <div class="hamburger_contact">
-                    <a href="contact.html"><img src="./images/contact_button2.png" alt="contact" /></a>
+                    <a href="./contact.html"><img src="./images/contact_button2.png" alt="contact" /></a>
                 </div>
             </div>
 
@@ -76,7 +78,7 @@
         </div>
         <nav class="header_nav-sp">
             <ul class="hamburger-sp_text">
-                <li><a href="#tOP"><img src="./images/top_text_pc.png" alt="top" /></a></li>
+                <li><a href="#top"><img src="./images/top_text_pc.png" alt="top" /></a></li>
                 <li><a href="#concept"><img src="./images/concept_text_pc.png" alt="concept" /></a></li>
                 <li><a href="#works"><img src="./images/works_text_pc.png" alt="works" /></a></li>
                 <li><a href="#about"><img src="./images/about_text_pc.png" alt="about" /></a></li>
@@ -149,8 +151,8 @@
                 <h3 class="heading_h3">
                     <img src="./images/concept_text_pc.png" alt="concept" class="concept-h3" />
                 </h3>
-                <p class="concept-catchphrase_PC">丁寧な仕事の中に、楽しさや遊び心を。</p>
-                <p class="concept-catchphrase_SP">丁寧な仕事の中に、<br>楽しさや遊び心を。</p>
+                <p class="concept-catchphrase_PC">丁寧な作品の中に、楽しさや遊び心を。</p>
+                <p class="concept-catchphrase_SP">丁寧な作品の中に、<br>楽しさや遊び心を。</p>
                 <p class="concept-text">
                     一人ひとりの好きや素敵という感性に寄り添い、喜びを丁寧に仕立てるという想いを込めています。単なる情報ではなく、クライアントの事業が持つ心地よい雰囲気や醸し出す空気感を読み取り、細部まで丁寧に仕立てていきたい。その中で楽しさや遊び心を忘れずにデザインに向き合っています。
                 </p>
@@ -319,37 +321,6 @@
             </div>
         </section>
 
-        <!-- コンタクト -->
-        <section id="contact">
-            <h3 class="heading_h3">
-                <div class="contact"></div>
-                <img src="./images/contact_text_pc.png" alt="contact" class="h3">
-            </h3>
-            <form
-                action="https://docs.google.com/forms/d/e/1FAIpQLSc0zeF4UOa11TyPvhSS4K6IdO5_qNzZZ2ZbkdQ7LVTKjWS2JA/viewform?usp=header"
-                method="post" target="hidden_iframe" onsubmit="submitted=true;" class="google-form">
-                <div class="form-style">
-                    <ul class="form">
-                        <li><label for="name">お名前<span class="required">必須</span></label></li>
-                        <li><label for="name">ふりがな<span class="required">必須</span></label></li>
-                        <li><label for="email">メールアドレス<span class="required">必須</span></label></li>
-                        <li><label for="name">会社名</label></li>
-                        <li><label for="message">お問い合わせ内容<span class="required">必須</span></label></li>
-                    </ul>
-                    <ul class="form">
-                        <li> <input type="entry.869201519" name="name" placeholder="例）山田花子" value="">
-                        <li><input type="entry.831544916" name="furigana" placeholder="例）やまだはなこ" value=""></li>
-                        <li><input type="entry.831544916" name="email" placeholder="例）tailoredjoy@example.com" value="">
-                        </li>
-                        <li><input type="entry.116560458" name="company" placeholder="例）tailoredjoy株式会社" value="">
-                        </li>
-                        <li><textarea id="entry.740560038" name="message" rows="5" placeholder="お問合せ内容を入力"></textarea>
-                        </li>
-                    </ul>
-                </div>
-                <button type="submit">送信する</button>
-            </form>
-        </section>
         <div class="footer-dot">
             <img src="./images/dotto_rectangle.png" alt="ドットの装飾" class="footer-dots">
         </div>
@@ -363,38 +334,44 @@
 
         <!--フッター部分 -->
         <footer>
+            <!-- SPのフッター -->
             <div class="footer_sp_content">
                 <div class="footer_logo_sp">
                     <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY">
                 </div>
                 <div class="footer_contact_sp">
-                    <a href="./contact.html">
+                    <a href="contact.html">
                         <img src="./images/contact_button2.png" alt="CONTACT">
                     </a>
                 </div>
                 <nav class="footer_nav_sp">
                     <ul>
-                        <li><a href="./index.html">TOP</a></li>
-                        <li><a href="./concept.html">CONCEPT</a></li>
-                        <li><a href="./works.html">WORKS</a></li>
-                        <li><a href="./about.html">ABOUT</a></li>
+                        <li><a href="index.html">TOP</a></li>
+                        <li><a href="concept.html">CONCEPT</a></li>
+                        <li><a href="works.html">WORKS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
                     </ul>
                 </nav>
                 <p class="copy_sp">&copy; haruna_ikeda.portfolio</p>
             </div>
-
+            <!-- PCのフッター -->
             <div class="footer_inner">
                 <div class="footer_left_content">
                     <div class="footer_address">
                         <ul>
-                            <li><a href="./index.html">TOP</a></li>
-                            <li><a href="./concept.html">CONCEPT</a></li>
-                            <li><a href="./works.html">WORKS</a></li>
-                            <li><a href="./about.html">ABOUT</a></li>
+                            <li><a href="index.html">TOP</a></li>
+                            <li><a href="concept.html">CONCEPT</a></li>
+                            <li><a href="works.html">WORKS</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
                         </ul>
                     </div>
-                    <p class="copy">&copy; haruna_ikeda.portfolio</p>
+                    <div class="footer_contact">
+                        <a href="contact.html">
+                            <img src="./images/contact_button2.png" alt="CONTACT">
+                        </a>
+                    </div>
                 </div>
+
                 <div class="pagetop_footer">
                     <a href="#header">
                         <img src="./images/top_scroll.png" alt="PAGE TOP" class="pagetop-frame" />
@@ -402,6 +379,7 @@
                     </a>
                 </div>
             </div>
+            <p class="copy">&copy; haruna_ikeda.portfolio</p>
 
             <div class="footer_logo">
                 <img src="./images/tailoredjoy_logo.png" alt="TAILORED JOY">
@@ -418,6 +396,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/scroll.js"></script>
+
     <script>
         // ローディング
         document.addEventListener("DOMContentLoaded", function () {
