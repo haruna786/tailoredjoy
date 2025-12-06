@@ -18,12 +18,15 @@ window.addEventListener("load", function () {
 
   // 犬フェーズのあとに続くコンテンツ
   const nextSection = document.querySelector("#concept");
-
+// -----------------------------------
+// -----------------------------------
+// 必要な要素がどれか一つでも取得できなかった場合
+// ここで実行を中断
   if (!scrollSection || !dogItem || !dogImg) return;
 
   let start = 0; // scroll_container をスクロールしきった位置
   let end = 0; // 犬フェーズが終わる位置
-  const maxScale = 2.5;
+  const maxScale = 2.5;//   最大で何倍に拡大するか
 
   let bgClone = null; // 固定背景クローン
   let dogClone = null; // 画面中央で動かす犬クローン

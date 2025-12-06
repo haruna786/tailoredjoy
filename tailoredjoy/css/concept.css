@@ -249,6 +249,8 @@ body {
     bottom: 5px;
     right: -15px;
 }
+
+
 @media screen and (max-width: 768px) {
 
 .concept-h1-pc {
@@ -381,8 +383,6 @@ body {
     top: 3325px;
     transform: rotate(0deg);
 }
-
-
 }
 
 
