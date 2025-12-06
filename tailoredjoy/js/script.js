@@ -56,35 +56,42 @@ $(function () {
 
 // ２つ目のナビゲーション
 $(function () {
+  function navScrollControl() {
+    // 画面幅が768px未満なら処理しない
+    if ($(window).width() < 768) return;
+
 // コンセプトセクションの上端のY座標を取得
 // offset().top→ページの一番上からコンセプトセクションまでの距離
-    const conceptPos = $('#concept').offset().top;
-    $(window).on('scroll', function() {
-        const scrollTop = $(window).scrollTop();
-        // スクロールがworksを過ぎたとき
-        if (scrollTop > conceptPos) {
-        // header_nav2 を表示
-            $('.header_nav2').addClass('active');
-        // ハンバーガーメニューのボタン自体を非表示
-            $('.hamburger').hide(); // .hide()で要素を非表示
+    const conceptPos = $("#concept").offset()?.top || 0;
+    const scrollTop = $(window).scrollTop();
 
-            // PCハンバーガーメニューが開いていたら自動で閉じる
-            if ($('.hamburger').hasClass('open')) {
-                // 開いていたメニュー（.header_nav）を閉じる
-                $('.header_nav').fadeOut(300);
-                // ボタンの開閉状態クラスを削除
-                $('.hamburger').removeClass('open');
-            }
+    // スクロールがworksを過ぎたとき
+    if (scrollTop > conceptPos) {
+    // header_nav2 を表示
+      $(".header_nav2").addClass("active");
+    // ハンバーガーメニューのボタン自体を非表示
+      $('.hamburger').hide(); // .hide()で要素を非表示
 
-        } else {
-            // TOPに戻ったら header_nav2 を非表示
-            $('.header_nav2').removeClass('active');
-            // ★ ハンバーガーメニューのボタンを再表示する
-            $('.hamburger').show(); // .show()で要素を再表示
-        }
-    });
+    // PCハンバーガーメニューが開いていたら自動で閉じる
+      if ($('.hamburger').hasClass('open')) {
+      // 開いていたメニュー（.header_nav）を閉じる
+      $('.header_nav').fadeOut(300);
+      // ボタンの開閉状態クラスを削除
+      $('.hamburger').removeClass('open');
+     }
 
+  } else {
+    // TOPに戻ったら header_nav2 を非表示
+      $('.header_nav2').removeClass('active');
+    // ★ ハンバーガーメニューのボタンを再表示する
+      $('.hamburger').show(); // .show()で要素を再表示
+    }
+  }
+  // 初回＆スクロール時＆リサイズ時にも評価
+  navScrollControl();
+  $(window).on("scroll resize", navScrollControl);
 });
+
 
 // 横スライド部分
 // HTMLドキュメント全体 の中から、セレクター(.sticky_wrap)に一致するすべての要素を

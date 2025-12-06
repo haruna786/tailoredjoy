@@ -226,6 +226,8 @@ html{
     gap: 20px;
 }
 
+
+
 /* コンタクトボタン */
 .hamburger_contact a {
     width: 800px;
@@ -316,7 +318,7 @@ html{
 }
 
 .header_nav-sp{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -426,9 +428,16 @@ html{
   transition: transform 0.2s linear, opacity 0.2s linear;
 }
 
-/* #back-color {
+#back-color {
   padding-top: 100vh;
-} */
+}
+
+/* ファーストビュー */
+.firstview {
+  margin: 0 auto;
+}
+
+
 
 /* ============================= */
 /* オーバーレイコンテンツ */

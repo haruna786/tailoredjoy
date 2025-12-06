@@ -4,8 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding-right: 7.6%;
-    padding-left: 2.9%; */
     position: absolute;
     width: 100%;
     z-index: 9999;/* 最大値 */
@@ -82,8 +80,8 @@
     background-color: #000;
     border-radius: 10px;
     position: fixed;
-    top: 30px;
-    right: 30px;
+    top: 19px;
+    right: 10px;
     z-index: 9999;/* 最大値 */
     cursor: pointer;
 }
@@ -132,7 +130,7 @@
     bottom:0;
 }
 .header_nav-sp{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
