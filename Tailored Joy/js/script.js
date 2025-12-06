@@ -110,27 +110,6 @@ function transform(section) {
     scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`
 }
 
-// // 犬がスクロールに合わせて大きくなる
-
-$(function () {
-    /* スクロール量　代入用 */
-    var scroll;
-    var sum;
-    $(window).scroll(function () {
-        /* スクロール量を取得 */
-        scroll = $(this).scrollTop();
-        /* コンソールログで確認  */
-        console.log(scroll);
-        /* 円の大きさ+スクロール量 / 60*/
-        sum = 1 + scroll / 80;
-        console.log(sum);
-        /* 円の大きさにスクロール量を足す */
-        $(".image-item-dog").css({
-            "transform": "scale(" + sum + ")"
-        })
-    })
-})
-
 
 
 
