@@ -80,11 +80,13 @@ section {
 }
 
 /* 作品グリッド */
-#website, #lp, #banner, #illust {
+#website, #lp, #banner, #illust,#gif {
     display: grid;
     gap: 20px;
     max-width: 700px;
 }
+
+
 .work-image {
     top: 0;
     left: 0;

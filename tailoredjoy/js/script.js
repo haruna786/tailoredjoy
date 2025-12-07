@@ -196,3 +196,45 @@ $(".works-right-push").removeClass("open");
 });
 
 
+function clear() {
+    $('#website').css('display','none');
+    $('#lp').css('display','none');
+    $('#banner').css('display','none');
+    $('#illust').css('display','none');
+    $('#gif').css('display','none');
+}
+
+
+// ボタン表示
+$("#all-btn,#all-btn2").on("click", function () {
+    $('#website').css('display','grid');
+    $('#lp').css('display','grid');
+    $('#banner').css('display','grid');
+    $('#illust').css('display','grid');
+    $('#gif').css('display','grid');
+});
+
+$("#website-btn, #website-btn2").on("click", function () {
+    clear();
+    $('#website').css('display','grid');
+});
+
+$("#lp-btn, #lp-btn2").on("click", function () {
+    clear();
+    $('#lp').css('display','grid');
+});
+
+$("#banner-btn, #banner-btn2").on("click", function () {
+    clear();
+    $('#banner').css('display','grid');
+});
+
+$("#illust-btn, #illust-btn2").on("click", function () {
+    clear();
+    $('#illust').css('display','grid');
+});
+
+$("#gif-btn, #gif-btn2").on("click", function () {
+    clear();
+    $('#gif').css('display','grid');
+});
