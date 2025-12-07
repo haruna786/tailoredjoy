@@ -73,7 +73,17 @@ body{
     z-index: 998;
     top: 50%;
 }
-
+@media screen and (max-width: 768px) {
+#showloading img {
+    width: 40%;
+    height: auto;
+    margin: auto;
+    left: 30%;
+    position: absolute;
+    z-index: 998;
+    top: 55%;
+}
+}
 
 /* 追従ボタンの動き */
 html{
@@ -533,7 +543,7 @@ html{
 .scroll::before {
     animation: scroll 3.5s infinite;
     border: solid #000;
-    border-width: 0 0 1px 1px;
+    border-width: 0 0 3px 3px;
     content: "";
     display: inline-block;
     margin: auto;
@@ -843,6 +853,10 @@ height:auto;
     height: auto;
     display: block;
     margin-top: 64px;
+}
+#dog-click-image{
+    width: 100px;
+    height: 100px;
 }
 
 .dog-illustration-container {
@@ -1167,6 +1181,10 @@ height:auto;
 
 @media screen and (max-width: 768px) {
 
+#works{
+padding-bottom: 50px;
+}
+
 #works-back {
     width: 60%;
     height: 320px;
@@ -1216,7 +1234,7 @@ height:auto;
 }
 .image img {
     width: auto;
-    height: 110px;
+    height: 140px;
     display: block;
     object-fit: cover; /* 親要素全体を覆うように表示 */
     padding: 10px;
@@ -1356,7 +1374,7 @@ height:auto;
 
 /* ワークス下のイラスト */
 .works_underillust{
-    padding-top: 20px;
+    padding-top: 60px;
 }
 .illust_image{
     display: flex;

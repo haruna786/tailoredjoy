@@ -290,7 +290,7 @@
 @media screen and (max-width: 768px) {
 .dots-content {
     background-image: radial-gradient(#dbf3f9 25%, transparent 13%);
-    background-size: 280px 280px;
+    background-size: 200px 200px;
     min-height: 100%;
     width: 100vw;
     height: 100%;
@@ -312,8 +312,8 @@
 
 .profile-image-wrapper {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 20px;
@@ -345,6 +345,7 @@
 .name{
     padding-bottom: 20px;
     text-align: center;
+    display: block;
 }
 
 .name h3{
@@ -368,12 +369,18 @@
     padding-bottom: 5px;
 }
 
+.profile-right {
+    padding-top: 20px;
+    max-width: 310px;
+    margin: 0 auto;
+}
+
 .favorite-icons{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 600px;
-    gap: 10px;
+    gap: 36px;
     padding: 0px;
 }
 
@@ -384,8 +391,8 @@
 }
 
 .icon-circle {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border: 3px solid #333;
     border-radius: 10%;
     display: flex;
@@ -429,12 +436,27 @@
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    left: 122px;
+    left: 50%;
     top: 10px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.content {
+    background: #fff;
+    border: #000 solid 3px;
+    border-radius: 30px;
+    padding: 30px;
+    width: 245px;
+    height: 370px;
+    margin: 20% auto;
+}
+.popup-image {
+    width: 100px;
+    height: auto;
+    margin-left: 5px;
+    margin-top: 15px;
 }
 
 .skills-section .profile-sp {

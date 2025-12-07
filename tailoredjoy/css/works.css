@@ -2,7 +2,7 @@
 .works-all {
     display: flex;
     justify-content: center;
-    padding: 80px 65px;
+    padding: 80px 25px;
     background-color: #a9c4c8;
 }
 
@@ -151,7 +151,7 @@ section {
     position: fixed; /* 画面に固定 */
     top: 25%;
     right: 0;
-    width: 55px;
+    width: 42px;
     height: 245px;
     padding: 10px 5px;
     background-color: #000;
@@ -168,6 +168,7 @@ section {
     letter-spacing: 1.6px;
     color: #fff;
     padding-top: 34px;
+    font-size: 14px;
 }
 
 .works-right-closeicon span {
@@ -179,7 +180,7 @@ section {
 
 .works-right-push-menu {
     position: fixed;
-    top: 210px;
+    top: 25%;
     right: 0;
     width: 30%;
     height: 215px;
