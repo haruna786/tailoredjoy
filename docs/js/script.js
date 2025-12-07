@@ -19,21 +19,26 @@ $nav.on("click","a",function(){
 });
 });
 
+
 $(function () {
-  const $hamburger = $(".hamburger");
-  const $nav2 = $(".header_nav-sp");
+  $(".hamburger").click(function () {
+    if (window.innerWidth <= 768) {
+      $(".hamburger").toggleClass("open-sp");
+      $(".header_nav-sp").fadeToggle();
+    }
+  });
+})
 
-  $hamburger.on("click",function(e){
-  e.stopPropagation();
-  $hamburger.toggleClass("open");
-  $nav2.toggleClass("is-open");
-});
+$(function () {
+  $(".hamburger-sp").click(function () {
+    if (window.innerWidth <= 768) {
+      $(".hamburger-sp").toggleClass("open-sp");
+      $(".header_nav-sp").fadeToggle();
+    }
+  });
+})
 
-$nav.on("click","a",function(){
-  $hamburger.removeClass("open");
-  $nav2.removeClass("is-open");
-});
-});
+
 
 // =================================================
 
