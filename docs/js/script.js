@@ -19,6 +19,22 @@ $nav.on("click","a",function(){
 });
 });
 
+$(function () {
+  const $hamburger = $(".hamburger");
+  const $nav2 = $(".header_nav-sp");
+
+  $hamburger.on("click",function(e){
+  e.stopPropagation();
+  $hamburger.toggleClass("open");
+  $nav2.toggleClass("is-open");
+});
+
+$nav.on("click","a",function(){
+  $hamburger.removeClass("open");
+  $nav2.removeClass("is-open");
+});
+});
+
 // =================================================
 
 // クリックすると犬の画像+背景が変わる
