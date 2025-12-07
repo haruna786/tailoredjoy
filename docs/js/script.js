@@ -4,31 +4,22 @@
 
 // ハンバーガーメニュー
 $(function () {
-  $(".hamburger").click(function () {
-    $(".hamburger").toggleClass("open");
-    // $(".header_nav").toggleClass("is-open");
-    // $(".header_nav").fadeToggle();
-  });
+  const $hamburger = $(".hamburger");
+  const $nav = $(".header_nav");
+
+  $hamburger.on("click",function(e){
+  e.stopPropagation();
+  $hamburger.toggleClass("open");
+  $nav.toggleClass("is-open");
 });
 
-$(function () {
-  $(".hamburger").click(function () {
-    if (window.innerWidth <= 768) {
-      $(".hamburger").toggleClass("open-sp");
-      $(".header_nav-sp").fadeToggle();
-    }
-  });
+$nav.on("click","a",function(){
+  $hamburger.removeClass("open");
+  $nav.removeClass("is-open");
 });
-$(function () {
-  $(".hamburger-sp").click(function () {
-    if (window.innerWidth <= 768) {
-      $(".hamburger-sp").toggleClass("open-sp");
-      $(".header_nav-sp").fadeToggle();
-    }
-  });
 });
 
-
+// =================================================
 
 // クリックすると犬の画像+背景が変わる
 $(function () {

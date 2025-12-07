@@ -178,9 +178,12 @@ html{
     box-sizing: border-box;
     visibility: hidden; /* 要素を非表示にする */
     opacity: 0; /* 透明にして非表示のアニメーションを可能にする */
-    transition: 0.3s;
+    transition: opacity 0.3s ease;
 }
 
+.header_nav.is-open{
+    opacity: 1;
+}
 
 .hamburger.open + .header_nav {
     visibility: visible;
