@@ -319,6 +319,17 @@ section {
 .image-full{
     display: flex;
     gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.image-full-block{
+    display: block;
+    text-align: center;
+}
+
+.image-full-block img{
+    padding-bottom: 5px;
 }
 
 .image-full img{
