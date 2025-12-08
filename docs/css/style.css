@@ -185,10 +185,12 @@ html{
     opacity: 1;
 }
 
+
 .hamburger.open + .header_nav {
     visibility: visible;
     opacity: 1;
 }
+
 
 .header_nav::before {
     /* 擬似要素を使って区切り線の下の要素（ロゴとコンタクト）をここに配置する */
@@ -255,6 +257,16 @@ html{
 .header_nav,
 .hamburger{
         display: none;
+}
+
+.header_nav-sp.is-open-sp{
+    opacity: 1;
+}
+
+
+.hamburger-sp.open-sp + .header_nav-sp {
+    visibility: visible;
+    opacity: 1;
 }
 
 .header-logo{

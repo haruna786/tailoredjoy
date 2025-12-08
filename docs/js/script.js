@@ -19,6 +19,26 @@ $nav.on("click","a",function(){
 });
 });
 
+// -----------------------------------------
+
+// $(function () {
+//   const $hamburgersp = $(".hamburger-sp");
+//   const $navsp = $(".header_nav-sp");
+
+//   $hamburgersp.on("click",function(e){
+//         if (window.innerWidth <= 768) {
+//   e.stopPropagation();
+//   $hamburgersp.toggleClass("open-sp");
+//   $navsp.toggleClass("is-open");
+//         }
+// });
+
+//   $navsp.on("click","a",function(){
+//   $hamburgersp.removeClass("open-sp");
+//   $navsp.removeClass("is-open");
+// });
+// });
+// -----------------------------------------
 
 $(function () {
   $(".hamburger").click(function () {
@@ -37,8 +57,6 @@ $(function () {
     }
   });
 })
-
-
 
 // =================================================
 
