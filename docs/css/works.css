@@ -313,6 +313,16 @@ section {
     padding: 20px 30px 40px 40px;
     line-height: 1.8;
 }
+
+.p-point-text{
+    margin: 10px 0px;
+    line-height: 1.5;
+}
+
+.point-text-weight{
+    font-weight: bold;
+}
+
 .image-banner{
     margin: 0 auto;
     width: 40%;
@@ -322,6 +332,12 @@ section {
     gap: 10px;
     width: 90%;
     margin: 0 auto;
+}
+
+.image-sizedown{
+    width: 70%;
+    height: auto;
+
 }
 
 .image-full-block{
