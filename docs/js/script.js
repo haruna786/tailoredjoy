@@ -195,6 +195,7 @@ function clear() {
     $('#banner').css('display','none');
     $('#illust').css('display','none');
     $('#gif').css('display','none');
+    $('#flyer').css('display','none');
 }
 
 
@@ -205,6 +206,7 @@ $("#all-btn,#all-btn2").on("click", function () {
     $('#banner').css('display','grid');
     $('#illust').css('display','grid');
     $('#gif').css('display','grid');
+    $('#flyer').css('display','grid');
 });
 
 $("#website-btn, #website-btn2").on("click", function () {
@@ -230,4 +232,8 @@ $("#illust-btn, #illust-btn2").on("click", function () {
 $("#gif-btn, #gif-btn2").on("click", function () {
     clear();
     $('#gif').css('display','grid');
+});
+$("#flyer-btn, #flyer-btn2").on("click", function () {
+    clear();
+    $('#flyer').css('display','grid');
 });

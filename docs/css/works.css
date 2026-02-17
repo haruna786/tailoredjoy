@@ -80,7 +80,7 @@ section {
 }
 
 /* 作品グリッド */
-#website, #lp, #banner, #illust,#gif {
+#website, #lp, #banner, #illust,#gif,#flyer {
     display: grid;
     gap: 20px;
     max-width: 700px;
@@ -314,6 +314,11 @@ section {
     line-height: 1.8;
 }
 
+.ps{
+    font-weight: bolder;
+    font-size: 13px;
+}
+
 .p-point-text{
     margin: 10px 0px;
     line-height: 1.5;
@@ -346,7 +351,8 @@ section {
 }
 
 .image-full-block img{
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+    width: 50%;
 }
 
 .image-full img{
