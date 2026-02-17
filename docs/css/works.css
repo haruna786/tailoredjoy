@@ -154,7 +154,7 @@ section {
     top: 25%;
     right: 0;
     width: 42px;
-    height: 245px;
+    height: 180px;
     padding: 10px 5px;
     background-color: #000;
     cursor: pointer;
@@ -185,7 +185,7 @@ section {
     top: 25%;
     right: 0;
     width: 30%;
-    height: 215px;
+    height: 255px;
     background-color: #FFF;
     border: 3px #000 solid;
     color: #000;
@@ -250,6 +250,7 @@ section {
     font-weight: bold;
     border-bottom: 1px solid;
     padding-bottom: 3%;
+    padding-top: 0;
 }
 
 .space-back {
