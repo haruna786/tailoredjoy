@@ -329,6 +329,12 @@ section {
     font-weight: bold;
 }
 
+.image {
+    display: flex;
+    flex-direction: column; /* 中身を縦に並べる */
+    align-items: center;    /* 子要素を水平方向の中央に揃える */
+}
+
 .image-banner{
     margin: 0 auto;
     width: 40%;
