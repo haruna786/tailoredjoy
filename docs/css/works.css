@@ -66,9 +66,7 @@
     overflow-y: auto;
 }
 
-section {
-    margin-bottom: 20%;
-}
+
 
 /* セクションタイトル */
 .website-title, .lp-title, .banner-title, .illust-title {
@@ -282,6 +280,10 @@ section {
 }
 .description {
     font-size:15px;
+}
+
+section {
+    margin-bottom: 20%;
 }
 
 }
