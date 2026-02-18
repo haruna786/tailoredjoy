@@ -177,11 +177,12 @@ footer {
 .footer_contact_sp {
     display: block;
     width: 100%;
-    padding-bottom: 30px;
-    border-bottom: 2px solid #000;
+    padding-top: 20px;
+    /* padding-bottom: 20px;
+    border-bottom: 2px solid #000; */
 }
 .footer_contact_sp img {
-    width: 30%;
+    width: 40%;
     height: auto;
     margin: 0 auto;
     display: block;

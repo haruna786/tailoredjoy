@@ -1218,6 +1218,7 @@ padding-bottom: 50px;
     z-index: 1;
     max-width: 768px;
     margin: 0 auto;
+    padding-bottom: 40px;
 }
 
 .works_content_wrapper .heading_h2{
@@ -1270,7 +1271,7 @@ padding-bottom: 50px;
 }
 
 .works_image .slick-dots {
-    top: 350px;
+    top: 390px;
     left: 0%;
     max-width: 700px;
 }
@@ -1356,7 +1357,7 @@ padding-bottom: 50px;
     width: 350px;
     height: auto;
     left: 0%;
-    top: 60px;
+    top: 95px;
     margin: 15px auto;
     padding-bottom: 50px;
     z-index: 1;
