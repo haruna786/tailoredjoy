@@ -98,12 +98,14 @@
     line-height: 1.7;
 }
 
-.profile-value p {
+.profile-value  {
     margin-top: 30px;
+}
+
+.profile-value p{
     font-size: 20px;
     line-height: 1.7;
 }
-
 .name{
     display: flex;
     gap: 10px;
@@ -117,7 +119,7 @@
 
 /* すきなこと・もの */
 .favorite-section {
-    margin-bottom: 80px;
+    margin-bottom: 200px;
     position: relative;
 }
 
@@ -248,6 +250,7 @@
 .popup-description{
     max-width: 500px;
     margin:0  auto;
+    line-height: 1.7;
 }
 
 .popup-image{
